@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Day-2</title>
+		<meta name="description" content="" />
+		<meta name="author" content="C5189602" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<button onclick="showAnimation(1)">
+			Translate
+		</button>
+		<button onclick="showAnimation(2)">
+			Scale
+		</button>
+		<button onclick="showAnimation(3)">
+			Rotate
+		</button>
+		<button onclick="showAnimation(0)">
+			Reset
+		</button>
+		<canvas id="canvas" width="400px" height="300px" style="border:2px dotted;"></canvas>
+		<script type="text/javascript">
+			// IMAGE EXAMPLES
+
+			showAnimation = function(cmd) {
+				var can = document.getElementById('canvas');
+				var ctx = can.getContext("2d");
+				switch(cmd) {
+					case 0:
+						ctx.clearRect(0, 0, can.width, can.height);
+						ctx.restore();
+						ctx.fillRect(10, 10, 50, 50);
+						ctx.save();
+						break;
+					case 1:
+						ctx.fillStyle = "green"
+						ctx.translate(200, 200);
+						ctx.fillRect(10, 10, 50, 50);
+						break;
+					case 2:
+						ctx.fillStyle = "yellow"
+						ctx.scale(2, 2);
+						ctx.fillRect(10, 10, 50, 50);
+						break;
+					case 3:
+						ctx.fillStyle = "blue";
+						var deg = 45;
+						var rad = Math.PI/180 * deg
+						ctx.rotate(rad);
+						ctx.fillRect(300, 20, 50, 50);
+						break;
+				}
+			}
+			drawOnCanvas = function() {
+				var can = document.getElementById('canvas');
+				var ctx = can.getContext("2d");
+				ctx.fillStyle = "red";
+				ctx.fillRect(10, 10, 50, 50);
+				ctx.save();
+			}
+			drawOnCanvas();
+
+		</script>
+	</body>
+</html>

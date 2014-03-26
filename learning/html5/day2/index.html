@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Day-2</title>
+		<meta name="description" content="" />
+		<meta name="author" content="C5189602" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<style>
+			#documentHolder {
+				width: 600px;
+				height: 600px;
+				border: 5px blue solid;
+			}
+
+			ul li {
+
+				list-style-type: none;
+				float: left;
+				border: 2px red solid;
+				cursor: pointer;
+				margin-left: 2%
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1> Day 2 </h1>
+		<nav style="height: 40px;">
+			<ul>
+				<li id ="1" >
+					Draw Simple Rectangle
+				</li>
+				<li id ="2" >
+					Draw Simple Line
+				</li>
+				<li id ="3" >
+					Draw Simple Arc ,Triangle, Curves
+				</li>
+				<li id ="4" >
+					Draw Simple Text
+				</li>
+				<li id ="5" >
+					Draw Simple Image
+				</li>
+				<li id ="6" >
+					Draw Simple Sliced Image
+				</li>
+				<li id ="7" >
+					Transformation
+				</li>
+				<li id ="8" >
+					Misc
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<div id="documentHolder" ></div>
+
+		<script type="text/javascript">
+			showHTMLContent = function(e) {
+				console.log(e.target.id);
+				document.getElementById('documentHolder').innerHTML = "<object  data='sample" + e.target.id + ".html' style='width: 100%; height: 100%;' ></object>"
+			}
+
+			window.addEventListener("load", function() {
+				var i = 1;
+				var len = document.getElementsByTagName("li").length;
+					
+				for (var i = 1; i <= len; i++) {
+					document.getElementById(i).addEventListener("click", showHTMLContent);
+				}
+			})
+
+		</script>
+	</body>
+</html>

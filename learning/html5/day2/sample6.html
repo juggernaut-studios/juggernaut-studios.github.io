@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Day-2</title>
+		<meta name="description" content="" />
+		<meta name="author" content="C5189602" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body>
+				<div  >
+
+			<img id="rhino_img" src="rhino.jpg" />
+		</div>
+		<button onclick="drawOnCanvas();">
+			DRAW SLICED IMAGE
+		</button>
+		<br />
+		<hr />
+		<canvas id="canvas" width="400px" height="300px" style="border:2px dotted;"></canvas>
+
+		<script type="text/javascript">
+			// IMAGE EXAMPLES
+			drawOnCanvas = function() {
+				var can = document.getElementById('canvas');
+				var ctx = can.getContext("2d");
+				ctx.font = "bold 28px sans-serif";
+				ctx.fillText(" SLICING IMAGE ", 10, 30);
+
+				ctx.drawImage(document.getElementById('rhino_img'), 33, 71, 104, 124, 100, 100, 87, 104);
+				ctx.stroke();
+
+			}
+
+		</script>
+	</body>
+</html>

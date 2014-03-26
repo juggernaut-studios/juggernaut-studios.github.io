@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Day-2</title>
+		<meta name="description" content="" />
+		<meta name="author" content="C5189602" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<style>
+			#documentHolder {
+				width: 100%;
+				border-radius: 30px;
+				border: 5px rgb(131, 131, 143) solid;
+			}
+
+			.navigationBtn {
+				width: 17%;
+				border: 1px red solid;
+				text-align: center;
+				cursor: pointer;
+				border-radius: 10px;
+				float: left;
+				font-size: 24px;
+			}
+
+			#headertext {
+				font-size: 30px;
+				text-align: center;
+			}
+			#contenttext {
+				font-size: 30px;
+				text-align: left;
+				padding-left: 10px;
+				padding-right: 10px
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1> Notes </h1>
+		<div style="width: 100%;height:40px;">
+			<div id="prevBtn" class="navigationBtn">
+				PREVIOUS
+			</div>
+			<div id="nxtBtn" class="navigationBtn">
+				NEXT
+			</div>
+		</div>
+		<div id="documentHolder" >
+
+			<header id="headertext"></header>
+			<hr />
+			<article id="contenttext">
+
+			</article>
+		</div>
+		<script src="js/note_data.js"></script>
+		<script src="js/wrapper.js"></script>
+	</body>
+</html>

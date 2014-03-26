@@ -1,0 +1,118 @@
+#header_content {
+	font-size: 61px;
+	font-weight: bold;
+}
+
+#dynamic_content {
+
+	width: 100%;
+	height: 80%;
+}
+
+#textual_content {
+	width: 80%;
+	border: 2px black solid;
+	border-radius: 10px;
+	font-size: 30px;
+	font-style: oblique;
+}
+
+#next_anim {
+	margin-top: 25%;
+	border-radius: 10px;
+	border: 2px black solid;
+	font-size: 30px;
+	font-style: oblique;
+	cursor: pointer;
+	width: 80%;
+	text-align: center;
+}
+
+#footer {
+	font-size: 30px;
+	font-style: oblique;
+}
+
+/*
+ SAMPLE2
+ * */
+
+section {
+	width: 60%;
+	height: 400px;
+	border: 1px red solid;
+	float: left;
+	border-radius: 10px;
+	background-color: yellow;
+}
+
+
+aside
+{
+	width: 39%;
+	height: 400px;
+	border: 1px red solid;
+	float: left;
+	border-radius: 10px;
+	background-color: yellowgreen;
+}
+
+
+nav
+{
+	width: 100%;
+	border: 1px red solid;
+	float: left;
+	border-radius: 10px;
+	background-color: yellowgreen;
+	
+}
+
+article
+{
+	width: 100%;
+	height:50%;
+	border-radius: 10px;
+	border:2px black dotted;
+	
+}
+
+ul li
+{
+	float: left;
+	margin-left: 10%;
+	border:2px black solid;
+	list-style-type: none;
+	text-align: center;
+}
+
+
+header
+{
+	width: 100%;
+	height: 50px;
+	border: 1px red solid;
+	float: left;
+	border-radius: 10px;
+	background-color: red;
+	text-align: center;
+	
+}
+
+
+footer{
+	width: 100%;
+	height: 60px;
+	border: 1px red solid;
+	float: left;
+	border-radius: 10px;
+	background-color: rgb(204, 204, 216);
+	text-align: center;
+}
+
+
+body
+{
+	font-size: 35px;
+	
+}

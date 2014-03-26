@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057) -->
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JnS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<style>
+			#login {
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				position: absolute
+			}
+		</style>
+		<script>
+			clickHandler = function(cmd) {
+				window.location = "day" + cmd + "/index.html"
+			}
+			
+			checkPassword = function()
+			{
+				if(document.getElementById("passwd").value === "tlabs")
+				{
+					document.getElementById("passwd").style.display = "none";
+				} 
+				else
+				{
+					alert("invalid password")
+					window.location ="https://www.google.com/"
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="login">
+				<input id="passwd" type="password" />
+				<button onclick="checkPassword()"> SUBMIT</button>
+		</div>
+
+		<div id="activity">
+			<h1> DAY WISE UPDATE</h1>
+			<hr />
+			<button onclick="clickHandler(1)">
+				DAY 1
+			</button>
+			<hr />
+			<button onclick="clickHandler(2)">
+				DAY 2
+			</button>
+			<hr />
+			<button onclick="clickHandler(3)">
+				DAY 3
+			</button>
+		</div>
+	</body>
+</html>

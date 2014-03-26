@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057) -->
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JnS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<style>
+			body {
+				font-family: font_custom;
+				padding-bottom: 40px;
+				color: #5a5a5a;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1> Implementation </h1>
+		<div class="container-fluid">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#home" data-toggle="tab">HTML5 DOCTYPE</a>
+				</li>
+				<li>
+					<a href="#profile" data-toggle="tab">HTML ELEMENT</a>
+				</li>
+				<li>
+					<a href="#messages" data-toggle="tab">CHARACTER ENCODING</a>
+				</li>
+				<li>
+					<a href="#settings" data-toggle="tab">LINK TAGs</a>
+				</li>
+				<li>
+					<a href="#settings1" data-toggle="tab">HTML MARK UP</a>
+				</li>
+				<li>
+					<a href="#settings2" data-toggle="tab">ATTRIBUTES</a>
+				</li>
+				<li>
+					<a href="#settings3" data-toggle="tab">INPUT TYPES</a>
+				</li>
+				<li>
+					<a href="#settings4" data-toggle="tab">FORM VALIDATION</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="home">
+					<!--
+					DOCTYPE  :Decalration!
+					Now we have <!DOCTYPE  html> earlier it was <!DOCTYPE html   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+					Basically required for informing the browser which version of document it is.
+					-->
+					<pre><code>DOCTYPE  :Decalration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now we have &lt;!DOCTYPE  html&gt; earlier it was &lt;!DOCTYPE html   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically required for informing the browser which version of document it is.</code></pre>
+				</div>
+				<div class="tab-pane" id="profile">
+					<!--<code>
+					- An HTML page is a series of nested elements
+					- The root element of an HTML page is always
+					<html>
+					- The first child of the root element is usually the
+					<head>
+					element
+					<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+					<title>TEST-Day3</title>
+					<link rel="stylesheet" type="text/css" href="style-original.css" />
+					<link rel="shortcut icon" href="/favicon.ico" />
+					</head>
+
+					</code> -->
+					<pre><code>- An HTML page is a series of nested elements
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The root element of an HTML page is always
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The first child of the root element is usually the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;TEST-Day3&lt;/title&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="style-original.css" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="shortcut icon" href="/favicon.ico" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+</code></pre>																																																		
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				<div class="tab-pane" id="messages">
+
+					<!--					<code>
+					Character Encoding- Every piece of text you have ever seen on a computer screen is actually stored in a particular character encoding
+					- Its a key for decoding the characters to unicode.
+					- For example : COPYRIGHT SIGN -- c2 a9 [UTF8] -- U+00A9[Unicode]
+					Earlier this was used
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+					but now we can just use
+					<meta charset="utf-8" />
+
+					</code>-->
+					<pre><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Character Encoding- Every piece of text you have ever seen on a computer screen is actually stored in a particular character encoding
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Its a key for decoding the characters to unicode.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- For example : COPYRIGHT SIGN -- c2 a9 [UTF8] -- U+00A9[Unicode]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earlier this was used
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but now we can just use
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8" /&gt;
+</code></pre>																																													
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				<div class="tab-pane" id="settings">
+					<!--
+					- Link Tags : <link rel="stylesheet" href="style-original.css" type="text/css" />
+					- <link rel="stylesheet"> is for pointing to CSS rules that are stored in a separate file
+					- HTML5  now we have <link rel="stylesheet" href="style-original.css" />
+					-->
+					<pre><code>- Link Tags : &lt;link rel="stylesheet" href="style-original.css" type="text/css" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &lt;link rel="stylesheet"&gt; is for pointing to CSS rules that are stored in a separate file
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- HTML5  now we have &lt;link rel="stylesheet" href="style-original.css" /&gt;</code></pre>
+				</div>
+
+				<div class="tab-pane" id="settings1">
+					<!--
+					- Every browser has a master list of HTML elements that it supports
+					- Mozilla  has this http://mxr.mozilla.org/mozilla-central/source/parser/htmlparser/src/nsElementTable.cpp
+					- If the dom element is not present in it, It considers it to be unknown.
+					- prob : with unknown elements :
+					(a)How should the element be styled?
+					(b)What should the elements DOM look like?
+					- Different browsers answers it differently!!!
+					- All browsers render unknown elements inline, i.e. as if they had a display:inline CSS rule.
+					- HTML5 -  has
+					(A) block level elements : they are typically formatted with line-break before and after the element
+					== article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section : All these are shown as block level in HTML5 compliant browsers.
+					(B) inline-elements :Inline elements can appear within block-level or other inline elements.They take up the width of their contents
+					== button, input, label, select, textarea
+
+					- BUT!!! IE 9 does not apply any styling :( to unkown elements
+					-Internet Explorer (up to and including IE 8) will not treat the <article> element as a block-level element
+					-it will insert the element into the DOM as an empty node with no children
+					-BELOW is NORMAL BROWSER  DOM TREE
+					article
+					|
+					+--h1 (child of article)
+					|  |
+					|  +--text node "Welcome to Initech"
+					|
+					+--p (child of article, sibling of h1)
+					|
+					+--text node "This is your "
+					|
+					+--span
+					|  |
+					|  +--text node "first day"
+					|
+					+--text node "."
+					-IE 8 shows it as follows
+					article (no children)
+					h1 (sibling of article)
+					|
+					+--text node "Welcome to Initech"
+					p (sibling of h1)
+					|
+					+--text node "This is your "
+					|
+					+--span
+					|  |
+					|  +--text node "first day"
+					|
+					+--text node "."
+
+					- Solution : <script>document.createElement("article");</script> and IE remembers it all :)
+					-->
+					<pre><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Every browser has a master list of HTML elements that it supports
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mozilla  has this http://mxr.mozilla.org/mozilla-central/source/parser/htmlparser/src/nsElementTable.cpp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- If the dom element is not present in it, It considers it to be unknown.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- prob : with unknown elements :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a)How should the element be styled?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)What should the elements DOM look like?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Different browsers answers it differently!!!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- All browsers render unknown elements inline, i.e. as if they had a display:inline CSS rule.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- HTML5 -  has
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A) block level elements : they are typically formatted with line-break before and after the element
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section : All these are shown as block level in HTML5 compliant browsers.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) inline-elements :Inline elements can appear within block-level or other inline elements.They take up the width of their contents
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== button, input, label, select, textarea
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- BUT!!! IE 9 does not apply any styling :( to unkown elements
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Internet Explorer (up to and including IE 8) will not treat the &lt;article&gt; element as a block-level element
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-it will insert the element into the DOM as an empty node with no children
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-BELOW is NORMAL BROWSER  DOM TREE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;article
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--h1 (child of article)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  +--text node "Welcome to Initech"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--p (child of article, sibling of h1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--text node "This is your "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  +--text node "first day"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--text node "."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-IE 8 shows it as follows
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;article (no children)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 (sibling of article)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--text node "Welcome to Initech"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p (sibling of h1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--text node "This is your "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  +--text node "first day"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--text node "."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Solution : &lt;script&gt;document.createElement("article");&lt;/script&gt; and IE remembers it all :)</code></pre>
+				</div>
+
+				<div id="settings2" class="tab-pane">
+					<!--	Atributes newly added
+					valign     : Vertically aligns tags within an HTML element -top, middle, bottom
+					align      : Horizontally aligns tags - right, left, center
+					data-XXXX  : Custom attributes. Authors of a HTML document can define their own attributes. Must start with "data-".
+					draggable  : Specifies whether or not a user is allowed to drag an element - true,false, auto
+
+					Deprecated
+					rev    :	link, a
+					charset:	link and a
+					shape  :a
+					coords :a
+					longdesc:	img and iframe.
+					target	:link
+					nohref	:area
+					profile	:head
+					version	:html
+					name	:img
+					scheme	:meta
+					archive	:object
+					classid	:object
+					codebase :	object
+					codetype :	object
+					declare	 :object
+					standby	 :object
+					valuetype:	param
+					type	:param
+					axis	:td and t
+					abbr	:td and t
+					scope	:td
+					align	:caption, iframe, img, input, object, legend, table, hr, div, h1, h2, h3, h4, h5, h6, p, col, colgroup, tbody, td, tfoot, th, thead and tr.
+					alink	:body
+					link	:body
+					vlink	:body
+					text	:body
+					background:	body
+					bgcolor	:table, tr, td, th and body.
+					border	:table and object.
+					cellpadding :	table
+					cellspacing	: table
+					char	:col, colgroup, tbody, td, tfoot, th, thead and tr.
+					charoff	:col, colgroup, tbody, td, tfoot, th, thead and tr.
+					clear	:br
+					compact	 :dl, menu, ol and ul.
+					frame	:table
+					compact	:dl, menu, ol and ul.
+					frame	:table
+					frameborder:	iframe
+					hspace	:img and object.
+					vspace	:img and object.
+					marginheight:	iframe
+					marginwidth	:iframe
+					noshade	:hr
+					nowrap	:td and th
+					rules	:table
+					scrolling:	iframe
+					size	:hr
+					type	:li, ol and ul.
+					valign	:col, colgroup, tbody, td, tfoot, th, thead and tr
+					width	:hr, table, td, th, col, colgroup and pre.
+					-->
+					<pre><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atributes newly added
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valign     : Vertically aligns tags within an HTML element -top, middle, bottom
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;align      : Horizontally aligns tags - right, left, center
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-XXXX  : Custom attributes. Authors of a HTML document can define their own attributes. Must start with "data-".
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draggable  : Specifies whether or not a user is allowed to drag an element - true,false, auto
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rev    :	link, a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;charset:	link and a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape  :a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coords :a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longdesc:	img and iframe.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target	:link
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nohref	:area
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;profile	:head
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version	:html
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name	:img
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scheme	:meta
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archive	:object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classid	:object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;codebase :	object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;codetype :	object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declare	 :object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;standby	 :object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valuetype:	param
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type	:param
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;axis	:td and t
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abbr	:td and t
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scope	:td
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;align	:caption, iframe, img, input, object, legend, table, hr, div, h1, h2, h3, h4, h5, h6, p, col, colgroup, tbody, td, tfoot, th, thead and tr.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alink	:body
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link	:body
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vlink	:body
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text	:body
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:	body
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bgcolor	:table, tr, td, th and body.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border	:table and object.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cellpadding :	table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cellspacing	: table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char	:col, colgroup, tbody, td, tfoot, th, thead and tr.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;charoff	:col, colgroup, tbody, td, tfoot, th, thead and tr.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear	:br
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compact	 :dl, menu, ol and ul.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame	:table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compact	:dl, menu, ol and ul.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame	:table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frameborder:	iframe
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace	:img and object.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vspace	:img and object.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marginheight:	iframe
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marginwidth	:iframe
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noshade	:hr
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nowrap	:td and th
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rules	:table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrolling:	iframe
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size	:hr
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type	:li, ol and ul.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valign	:col, colgroup, tbody, td, tfoot, th, thead and tr
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width	:hr, table, td, th, col, colgroup and pre.</code></pre>
+				</div>
+
+				<div id="settings3" class="tab-pane">
+					<!--New INPUT TYPE
+					color          : for input fields that should contain a color
+					date           : the user to select a date.
+					datetime       :  user to select a date and time (with time zone).
+					datetime-local : user to select a date and time (without time zone).
+					email          : that should contain an e-mail addre
+					month          : user to select a month and year.
+					number         : for input fields that should contain a numeric value
+					range          : range type is used for input fields that should contain a value from a range of numbers.
+					search         :
+					tel            :
+					time           :
+					url            :
+					week           :
+					Example :  <input type="XXXX" name="favcolor">
+					-->
+					<pre><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New INPUT TYPE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color          : for input fields that should contain a color
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date           : the user to select a date.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;datetime       :  user to select a date and time (with time zone).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;datetime-local : user to select a date and time (without time zone).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email          : that should contain an e-mail addre
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month          : user to select a month and year.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number         : for input fields that should contain a numeric value	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range          : range type is used for input fields that should contain a value from a range of numbers. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search         :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tel            :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time           :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url            :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;week           :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example :  &lt;input type="XXXX" name="favcolor"&gt;		</code></pre>												
+
+
+
+				</div>
+
+				<div id="settings4" class="tab-pane">
+					<!--
+					- Form Validations
+					already because of input tags there are validations done at tag level. But we can disable this form validation
+					-<form novalidate>
+					<input type="email" id="addr">
+					<input type="submit" value="Subscribe">
+					</form>
+					- Mandating that a particular field is compulsory prior to submission
+					<form>
+					<input id="q" required>
+					<input type="submit" value="Search">
+					</form>
+					-->
+					<pre><code>- Form Validations
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;already because of input tags there are validations done at tag level. But we can disable this form validation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&lt;form novalidate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="addr"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Subscribe"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mandating that a particular field is compulsory prior to submission
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id="q" required&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Search"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;</code></pre>												   
+					
+
+
+				</div>
+			</div>
+
+		</div>
+		<script src="js/jquery-1.9.1.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>
