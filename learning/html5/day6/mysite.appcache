@@ -1,0 +1,37 @@
+CACHE MANIFEST
+# version 10.57
+
+
+# Explicitly cached entries
+
+# images for loading in cache
+http://cdn1.wonderfulengineering.com/wp-content/uploads/2013/12/hd-wallpaper-desktop-3.jpeg
+http://cdn2.wonderfulengineering.com/wp-content/uploads/2013/12/hd-wallpaper-desktop-4.jpg
+http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/high-definition-desktop-download-1.jpg
+http://www.w3schools.com/html/img_logo.gif
+img/p1.png
+http://3.bp.blogspot.com/-0AIZlreET_M/UWimtWgTuSI/AAAAAAAAI3A/vCYH-ZgEYos/s1600/Pc+Wallpapers+Hd+Download++14.jpg
+http://3.bp.blogspot.com/-e54NWJ9z7sw/UWim-Jzc8OI/AAAAAAAAI3I/cl5WoMTi6AM/s1600/Pc+Wallpapers+Hd+Download++16.jpg
+http://3.bp.blogspot.com/-e54NWJ9z7sw/UWim-Jzc8OI/AAAAAAAAI3I/cl5WoMTi6AM/s1600/Pc+Wallpapers+Hd+Download++16.jpg
+http://3.bp.blogspot.com/-uybZB1SUUs4/UWinCvb-lPI/AAAAAAAAI3Q/GO-mI3RMow8/s1600/Pc+Wallpapers+Hd+Download++2.jpg
+http://4.bp.blogspot.com/-QXyBQX_T9J0/UWinEQgX5WI/AAAAAAAAI3Y/6NhZnjHkyv8/s1600/Pc+Wallpapers+Hd+Download++3.jpg
+http://4.bp.blogspot.com/-EELaiYyJA2A/UWinMl7oCaI/AAAAAAAAI3w/jsLlGHomsnc/s1600/Pc+Wallpapers+Hd+Download++6.jpg
+http://3.bp.blogspot.com/-ea00TocYysg/UWinTBT2TkI/AAAAAAAAI4I/-bz4MABnYT0/s1600/Pc+Wallpapers+Hd+Download++8.jpg
+http://2.bp.blogspot.com/-pHvXHBIuj70/UWinTOaUhmI/AAAAAAAAI4M/Awf1T7SsAXs/s1600/Pc+Wallpapers+Hd+Download++9.jpg
+http://3.bp.blogspot.com/-fKp9g-0Vf-w/UWinUBkBkAI/AAAAAAAAI4Y/e-oUXKJMJjs/s1600/Pc+Wallpapers+Hd+Download++12.jpg
+http://4.bp.blogspot.com/-kIA8LRa4RgU/UWinUoZhMPI/AAAAAAAAI4c/drRQvret0Bg/s1600/Pc+Wallpapers+Hd+Download.jpeg
+http://4.bp.blogspot.com/-1wWVlxhiksw/UWimsf8f6-I/AAAAAAAAI24/PXoBLuXrAAQ/s1600/Pc+Wallpapers+Hd+Download++13.jpg
+
+# HTML for loading in cache
+c1.html
+
+
+
+#Network  : resources are only available while online
+NETWORK
+*
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+ no/ offline.html
+c1-notcached offline1.html

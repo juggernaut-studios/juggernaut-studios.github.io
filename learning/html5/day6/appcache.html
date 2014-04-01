@@ -1,0 +1,41 @@
+<!doctype>
+<html manifest="mysite.appcache">
+
+<head>
+   <title>AppCache!!</title>
+    
+    <style>
+    
+    ._wrapper
+        {
+            width: 400px;
+            height: 70px;
+            border: 2px red solid;
+            background-image: url(img/p1.png);
+            background-size: 100% 100%;
+        }
+    
+    </style>
+           
+</head>
+    
+<body>
+   <h1>Application Cache</h1>
+    <div class="_wrapper">
+        
+    </div>
+    
+    <hr>
+    <div> test message changed  9</div>
+    <hr>
+    <div>LIMIT : 5 </div>
+    <hr>
+    <a href="c1.html" >Load cached C1.html</a>
+    <hr>
+    <a href="no/c1-notcached.html"> load NON-CACHED c1.html nested inside directory</a>
+    <hr>
+    <a href="c1-notcached.html"> Load NON-CACHED c1.html <span style="font-size:22px; font-weight:bold;"> NOT</span> nested inside directory</a>
+</body>
+
+
+</html>

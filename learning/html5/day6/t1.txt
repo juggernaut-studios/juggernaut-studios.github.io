@@ -1,0 +1,21 @@
+In HTML
+<html manifest="mysite.appcache" type="text/cache-manifest">
+
+Create file named
+<user_defined_name>.appcache
+
+
+Starting line of the file
+
+CACHE MANIFEST
+# -- indicates comments & also required for checking the version
+Now start mentioning the assets which needs to loaded locally
+
+Limit is 
+5MB in chrome - if your app contains more then the Application Cache Progress event will never be triggered so the application-would never be cached.
+
+This limit is same  = <SIZE of total art assets asked to load>
+
+
+
+
