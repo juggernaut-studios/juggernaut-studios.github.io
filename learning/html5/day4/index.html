@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<style>
+			
+			.container
+            {
+                    width: 600px;
+                    height: 800px;
+                border:1px red solid;
+            }
+		</style>
+	</head>
+	<body>
+		<button onclick="clickHanlder(1)"> LocalStroage  Example1 <button>
+            <button onclick="clickHanlder(1)"> LocalStroage  Example2 <button>
+                <button onclick="clickHanlder(1)"> Session Example <button>
+                    <button onclick="clickHanlder(1)"> WebSQL <button>
+                        
+                        <div  id="wrapper_container" class="container">
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        <script>
+                        
+                        
+                        clickHanlder = function(cmd)
+                        {
+                            var doc = document.getElementById("wrapper_container");
+                            switch(cmd)
+                            {
+                                    case 1:
+                                    doc.innerHTML = "<object width='600' height='800' data='localstorage-1.html'></object> "
+                                    break;
+                                    case 2:
+                                                       doc.innerHTML = "<object width='600' height='800' data='localstorage-2.html'></object> "
+                                    break;
+                                    case 3:
+                                                       doc.innerHTML = "<object width='600' height='800' data='websql.html'></object> "
+                                    break;
+                            }
+                            
+                        }
+                        </script>
+                        
+	</body>
+
+</html>

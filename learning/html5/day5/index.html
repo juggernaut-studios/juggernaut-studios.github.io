@@ -1,0 +1,37 @@
+<!doctype>
+<html>
+
+<head>
+    <style>
+	.h1
+	{
+	border :1px red solid;
+	}
+	</style>
+    
+</head>
+<body>
+    
+<video src="dizzy.mp4" width="300" height="200"  poster="s4.png" controls  >
+    
+    <source src="dizzy.mp4" />
+    </video>
+	
+	
+	<audio id="a1" class="h1" width="400" height="300" src="Kalimba.mp3" controls>
+	</audio>
+	<button onclick="clickHandler();">START AUDIO </button>
+    <script>
+	
+	au = document.getElementById("a1");
+	
+	clickHandler = function()
+	{
+		au.play();
+	}
+	
+	</script>
+</body>
+
+
+</html>

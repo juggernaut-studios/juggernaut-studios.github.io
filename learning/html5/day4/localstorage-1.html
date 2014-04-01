@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<style>
+			header {
+				font-size: 25px;
+				color: red;
+			}
+			section {
+				width: 100%;
+				border: 1px red solid;
+				height: 80%;
+			}
+
+			section div {
+				width: 40%;
+				margin-left: 20%
+			}
+
+			body {
+				font-size: 20px;
+			}
+			input {
+				border-radius: 5px;
+				font-size: 20px
+			}
+
+			.btn {
+				background-color: orange;
+				width: 200px;
+				border-radius: 5px;
+				text-align: center;
+				font-size: 25px;
+				cursor: pointer;
+			}
+			#loginSubmitBtn {
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header">
+			<span> WebStorage Is sample </span>
+		</header>
+		<section>
+			<div >
+
+				<label>User Name : </label>
+				<input id="keyParam" type="text" placeholder="Enter key">
+				<br />
+				<label>Password : </label>
+				<input id="valueParam" type="text" placeholder="Enter Value">
+				<br />
+
+				<div id="loginSubmitBtn" class="btn" onclick="saveToLocalStorage()">
+					Submit
+				</div>
+				<hr />
+				<textarea id="txtData" rows="8" cols="40"></textarea>
+				<input id="keyToFind" type="text" placeholder="Enter key">
+
+				<div id="loginGetDataBtn" class="btn" onclick="readFromLocalStorage();">
+					Get Previous Data
+				</div>
+
+			</div>
+
+		</section>
+
+		<script type="text/javascript">
+			/*
+
+			 interface Storage {
+			 getter any getItem(in DOMString key);
+			 setter creator void setItem(in DOMString key, in any data);
+			 deleter void removeItem(in DOMString key);
+			 void clear();
+			 };
+
+			 HANDLER
+			 if (window.addEventListener) {
+			 window.addEventListener("storage", handle_storage, false);
+			 } else {
+			 window.attachEvent("onstorage", handle_storage);
+			 };
+
+			 key :string the named key that was added, removed, or modified
+			 oldValue :any the previous value (now overwritten), or null if a new item was added
+			 newValue :any the new value, or null if an item was removed
+			 url* :string the page which called a method that triggered this change
+
+			 5 megabytes,” “QUOTA_EXCEEDED_ERR
+			 “5 megabytes” is how much storage space each origin gets by default.
+			 “QUOTA_EXCEEDED_ERR” is the exception that will get thrown if you exceed your storage quota of 5 megabytes
+
+			 *
+			 * */
+			saveToLocalStorage = function() {
+				var key = document.getElementById("keyParam").value;
+				var value = document.getElementById("valueParam").value;
+
+				window.localStorage.setItem(key, value);
+			}
+			readFromLocalStorage = function() {
+				var key = document.getElementById("keyToFind").value;
+				var val = window.localStorage.getItem(key);
+				document.getElementById("txtData").value = val;
+			}
+
+			window.addEventListener("load", function() {
+				alert("laoded")
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript">
+			var db;
+			var msg;
+
+			/*
+			 To create and open a database, use the following code:
+
+			 var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+			 Above method took following five paramters:
+
+			 Database name
+			 Version number
+			 Text description
+			 Size of database
+			 Creation callback
+			 * */
+			loadData = function() {
+				db.transaction(function(tx) {
+					tx.executeSql('SELECT * FROM tlab WHERE coursename="html5"', [], function(tx, results) {
+						var len = results.rows.length, i;
+						msg = "<p>Found rows: " + len + "</p>";
+						document.querySelector('#status').innerHTML += msg;
+						for ( i = 0; i < len; i++) {
+							msg = "<p><b>" + results.rows.item(i).studentname + "</b></p>";
+							document.querySelector('#status').innerHTML += msg;
+						}
+					}, null);
+				});
+			}
+			createDB = function() {
+				db = openDatabase('mydb1', '1.0', 'Test DB', 2 * 1024 * 1024);
+
+				db.transaction(function(tx) {
+					tx.executeSql('CREATE TABLE IF NOT EXISTS tlab (id unique, coursename,studentname)');
+					tx.executeSql('INSERT INTO tlab (id, coursename,studentname) VALUES (1, "html5","suresh")');
+					tx.executeSql('INSERT INTO tlab (id, coursename,studentname) VALUES (2, "css3","ramesh")');
+					tx.executeSql('INSERT INTO tlab (id, coursename,studentname) VALUES (3, "html5","kamlesh")');
+					msg = '<p>Log message created and row inserted.</p>';
+					document.querySelector('#status').innerHTML = msg;
+				});
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="status" name="status">
+			Status Message
+		</div>
+		<button onclick="createDB()">
+			Create DB
+		</button>
+		<button onclick="loadData();">
+			READ DATA FROM WEB SQL
+		</button>
+	</body>
+</html>
