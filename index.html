@@ -72,6 +72,8 @@
     <button onclick="clickForLinks (1)"> TWITTER </button><br>
     <button onclick="clickForLinks (2)"> Facebook </button><br>
     <button onclick="clickForLinks (3)"> Google Plus </button><br>
+    <button onclick="clickForLinks (4)"> LinkedIn </button><br>
+    
 </div>
         
         
@@ -79,21 +81,28 @@
         
         clickForLinks = function(cmd)
         {
+            var url="";
             switch(cmd)
             {
                 case 1:
                     //twitter
-                    window.location = "http://twitter.com/home?status=Testing"
+                    url=  "http://twitter.com/home?status=Testing"
                     break;
                     case 2:
                     //facebook
-                    window.location = "http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing"
+    url=  "http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing"
                     break;
                     case 3:
                     //google plus
-                    window.location = "https://plus.google.com/share?url=http://appstore.com/"
+         url= "https://plus.google.com/share?url=http://appstore.com/"
+                    break;
+                    case 4:
+              url=      ' http://www.linkedin.com/shareArticle?mini=true&url=http%3A//developer.linkedin.com&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn'
                     break;
             }
+            
+            window.open(url,"_blank");
+            
         }
         
         
