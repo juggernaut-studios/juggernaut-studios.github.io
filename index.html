@@ -61,11 +61,42 @@
 <div class=”social”>
 <p>Share this post on:</p>
 <!–Twitter–>
-<a class=”twitter” href=”http://twitter.com/home?status=Reading&Testing" title=”Share this post on Twitter!” target=”_self”>Twitter</a>
+<a class=”twitter” href='http://twitter.com/home?status=Testing' title='Share this post on Twitter!' target=”_self”>Twitter</a>
 
-<a class=”facebook” href=”http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing” title=”Share this post on Facebook!” >Facebook</a>
+<a class=”facebook” target="_self" href=”http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing” title=”Share this post on Facebook!” >Facebook</a>
 
-<a class=”google-plus” target=”_blank” href=”https://plus.google.com/share?url=http://appstore.com/”>Google+</a>
+<a class=”google-plus” target=”_self” href=”https://plus.google.com/share?url=http://appstore.com/”>Google+</a>
+    
+    
+    <br>
+    <button onclick="clickForLinks (1)"> TWITTER </button><br>
+    <button onclick="clickForLinks (2)"> Facebook </button><br>
+    <button onclick="clickForLinks (3)"> Google Plus </button><br>
 </div>
+        
+        
+        <script>
+        
+        clickForLinks = function(cmd)
+        {
+            switch(cmd)
+            {
+                case 1:
+                    //twitter
+                    window.location = "http://twitter.com/home?status=Testing"
+                    break;
+                    case 2:
+                    //facebook
+                    window.location = "http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing"
+                    break;
+                    case 3:
+                    //google plus
+                    window.location = "https://plus.google.com/share?url=http://appstore.com/"
+                    break;
+            }
+        }
+        
+        
+        </script>
 	</body>
 </html>
