@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web workers</title>
+    <style>
+        body{height:3000px;}
+    </style>
+</head>
+<body>
+<label for=fibonacci>fibonacci</label>
+<input id=fibonacci value=40>
+
+<button onclick="fibonacci1()">worker</button>
+<button onclick="fibonacci2()">this</button>
+    <button onclick="fibonacci3()">test Page</button>
+<div id="logs"></div>
+<script>
+    var logs = document.getElementById("logs");
+    function log(msg){
+        logs.innerHTML += msg;
+    }
+
+    function fibonacci1(){
+        var num = parseInt(document.getElementById("fibonacci").value);
+        var worker = new Worker("code/t1.js");
+
+        worker.onmessage = function(event) {
+            log("fibonacci("+num+") = " + event.data + "<br>");
+        };
+
+        worker.postMessage(num);
+    }
+    
+    function fibonacci3(){
+        alert(" TEST");
+    }
+
+    function f(n) {
+
+        if(n == 0 || n==1) {
+            return n;
+        }
+        else {
+            return(f(n - 1) + f(n - 2));
+        }
+    }
+    function fibonacci2(){
+        var num = parseInt(document.getElementById("fibonacci").value);
+        var res = f(num);
+        log("fibonacci("+num+") = " + res + "<br>");
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

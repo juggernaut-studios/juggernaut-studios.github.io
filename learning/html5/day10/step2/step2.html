@@ -1,0 +1,114 @@
+<html>
+<head>
+    
+    <title> WebWorker</title>
+    <style>
+    
+        #respTxt 
+        {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+    
+    </style>
+    </head>
+
+<body>
+    <h1>
+        Step 1: Simple communication between WebWorker and JS
+    </h1>
+    
+    <button onclick="createWorker()"> Create Worker</button>
+    <div id="workerTrack">  worker Not created yet!</div>
+    <hr>
+    <input type="text" id="ownerSays" placeholder="Enter Text"/>
+    <button onclick="sayhello()"> Speak to Worker </button>
+    <hr>
+    
+    <button onclick="closeWorker()"> Ask the Worker to Stop </button>
+    <hr>
+    <button onclick="forceCloseWorker()"> Force Stop Worker </button>
+    <div  id="respTxt"></div>
+    
+    
+    <script>
+    
+        //global object 
+        var employee;
+        
+        //testing scopr
+        var mSandeep ="HE IS THERE"
+        
+        
+        
+        
+        function createWorker()
+        {
+            if(employee === undefined)
+            {
+                employee = new Worker("any_name_step2.js");
+                addListener();
+            }
+            alert(mSandeep)
+        
+        }
+        
+        function addListener()
+        {
+            employee.onerror = onErrorResponseFromWorker;
+            employee.onmessage = onMessageResponseFromWorker;
+            
+            
+            document.getElementById('workerTrack').innerHTML ="Worker Created :D"
+        }
+        
+        function onMessageResponseFromWorker (e)
+        {
+            document.getElementById("respTxt").innerHTML += "<br> Worker Says :"+e.data.message
+        }
+        
+        function onErrorResponseFromWorker (e)
+        {
+            document.getElementById("respTxt").innerHTML += "<br> Error :Worker Says :"+e.message
+        }
+        
+        function sayhello() 
+        {
+            if(employee !== undefined)
+            {
+                employee.postMessage({cmd:'start',msg:document.getElementById('ownerSays').value})
+                document.getElementById("respTxt").innerHTML += "<br><span style='font-size:25px;font-weight:bold;'> Owner Says :"+document.getElementById('ownerSays').value +" </span>";
+                document.getElementById('ownerSays').value ="";
+            }
+            
+        }
+        
+        
+        function closeWorker()
+        {
+            if(employee !== undefined)
+            {
+                 employee.postMessage({cmd:'stop'})
+            }
+        }
+        
+        
+        function forceCloseWorker()
+        {
+            if(employee !== undefined)
+            {
+                console.log(" Before ",employee);
+                employee.terminate();
+                console.log(" After ",employee);
+            }
+            
+        }
+    
+    
+    </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+    
+    <title> WebWorker</title>
+    
+    </head>
+
+<body>
+    <h1>
+        Step 1: Simple communication between WebWorker and JS
+    </h1>
+    
+    <button onclick="createWorker()"> Create Worker</button>
+    <div id="workerTrack">  worker Not created yet!</div>
+    <hr>
+    <input type="text" id="ownerSays" placeholder="Enter Text"/>
+    <button onclick="sayhello()"> Speak to Worker </button>
+    <hr>
+    <div  id="respTxt"></div>
+    
+    
+    <script>
+    
+        //global object 
+        var employee;
+        
+        function createWorker()
+        {
+            if(employee === undefined)
+            {
+                employee = new Worker("any_name_step1.js");
+                addListener();
+            }
+        
+        }
+        
+        function addListener()
+        {
+            employee.onerror = onErrorResponseFromWorker;
+            employee.onmessage = onMessageResponseFromWorker;
+            
+            
+            document.getElementById('workerTrack').innerHTML ="Worker Created :D"
+        }
+        
+        function onMessageResponseFromWorker (e)
+        {
+            document.getElementById("respTxt").innerHTML += "<br> Worker Says :"+e.data.message
+        }
+        
+        function onErrorResponseFromWorker (e)
+        {
+            document.getElementById("respTxt").innerHTML += "<br> Error :Worker Says :"+e.message
+        }
+        
+        function sayhello() 
+        {
+            if(employee !== undefined)
+            {
+                employee.postMessage({cmd:'start',msg:document.getElementById('ownerSays').value})
+                document.getElementById("respTxt").innerHTML += "<br> Owner Says :"+document.getElementById('ownerSays').value;
+                document.getElementById('ownerSays').value ="";
+            }
+            
+        }
+    
+    
+    </script>
+    
+    </body>
+
+</html>

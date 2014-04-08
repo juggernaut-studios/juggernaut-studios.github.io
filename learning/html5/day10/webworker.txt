@@ -1,0 +1,53 @@
+
+
+js: is single threaded environment :multiple sripts cannot run at same time
+
+Handle UI + Query and process large amt of data + manipulation DOM
+
+script execution happens within single thread
+
+
+
+
+>developers mimic concurreny 
+
+>But  non-blocking doesnt meain concurrency
+
+
+>spawning background scripts in your application
+ > all long running scripts 
+
+app can communicate
+workers can spawn other worker
+
+
+>USE CASE
+ calculating large prime number
+ sorting large array
+ network req.
+ spell checking
+ img manipulation
+ analying audio and video
+ backgroung IO
+ processing large array of huge json response
+
+
+
+>step1 
+ var worker = new Worker("t.js")
+// they run in an isolcated thread. so code should be in separate js
+
+>Step2
+ starting worker by calling postMessage()
+ worker.postMessage()
+
+>Step3
+worker handles that message by defining an onmessagehandler for message event
+onmessage = function(e)
+{
+	
+}
+
+
+//
+
