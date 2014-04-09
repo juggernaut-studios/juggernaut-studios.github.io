@@ -5,11 +5,18 @@
 <button onclick="getLocation()">Try It</button>
 <div id="mapholder"></div>
 <script>
+
+trace = function(str)
+{
+	alert(str)
+}
 var x=document.getElementById("demo");
 function getLocation()
   {
+  trace("clicked ");
   if (navigator.geolocation)
     {
+	trace("geo TRUE ");
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     }
   else{x.innerHTML="Geolocation is not supported by this browser.";}
@@ -17,6 +24,7 @@ function getLocation()
 
 function showPosition(position)
   {
+  trace("geo SUCCESS ");
   var latlon=position.coords.latitude+","+position.coords.longitude;
 
   var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
@@ -26,6 +34,7 @@ function showPosition(position)
 
 function showError(error)
   {
+  trace("geo ERROR ");
   switch(error.code) 
     {
     case error.PERMISSION_DENIED:
