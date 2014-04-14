@@ -1,0 +1,129 @@
+
+> global navigator object 
+	consist of navigator.geolocation
+
+
+
+>geolocation support is opt-in
+	:your browser will never force you to reveal your current physical location to a remote server
+
+Whenever a website tries accessing the location browser informs the following to user
+
+ - informs which website is trying to get your location
+ - user can chose to share location
+ - user can chose NOT to share location
+ - user can chose remember my location for sharing
+
+
+All is this through a infobar. 
+This info bar is
+# non-modal :so it won’t prevent you from switching to another browser window or tab
+# tab-specific :so it will disappear if you switch to another browser window or tab and reappear when you switch back to the original tab
+# unconditional :so there is no way for a website to bypass it
+# blocking : so there is no chance that the website can determine your location while it’s waiting for your answer
+
+
+
+
+Detect if geolocation attribute exist
+ if (navigator.geolocation)
+	{
+		// YES
+	}
+ else
+	{
+		// NO
+	}
+
+
+
+//CODE FOR FETCHING CURRENT LOCATION
+getCurrentPosition(<onSuccess>,<onError>,<OPTIONAL_CONFIG_JSON>)
+
+
+onSuccess = function(<positionObject>)
+{
+
+//positionObject - contains the following
+	coords.latitude : The latitude as a decimal number
+	coords.longitude : The longitude as a decimal number
+	coords.accuracy : The accuracy of position
+	coords.altitude :  altitude in meters above the mean sea level
+	coords.altitudeAccuracy : altitude accuracy of position
+	coords.heading : heading as degrees clockwise from North
+	coords.speed :  speed in meters per second
+	coords.timestamp : date/time of the response
+
+
+{"speed":null,"heading":null,"altitudeAccuracy":null,"accuracy":20,"altitude":null,"longitude":73.8287943,"latitude":18.5293766}
+
+*Only three of the properties are guaranteed to be there (coords.latitude, coords.longitude, and coords.accuracy)
+
+
+*The heading and speed properties are calculated based on the user’s previous position, if possible.
+
+	
+}
+
+
+
+
+
+
+
+onError = function(<error_object>)
+{
+ //error_object
+	#1.code : may contain following values
+			PERMISSION_DENIED 
+			POSITION_UNAVAILABLE 
+			TIMEOUT 
+			UNKNOWN_ERROR
+	#2.message
+}
+
+
+
+//------------
+
+For detecting where we are new Phones (iPhones and Android) have 2 methods
+#1 - triangulates your position based on your relative proximity to different cellular towers operated by your phone carrier
+This method is fast and doesn’t require any dedicated GPS hardware, but it only gives you a rough idea of where you are.
+
+#2 -uses dedicated GPS hardware on your device to talk to dedicated GPS positioning satellites that are orbiting the Earth. GPS can usually pinpoint your location within a few meters.
+:downside is that the dedicated GPS chip on your device draws a lot of power, so phones and other general purpose mobile devices usually turn off the chip until it’s needed
+
+WEb-Applications -Accuracy may vary depending upon type of app.
+
+: ex 
+#1 : looking for nearby movie listings, a “low accuracy” location is probably good enough
+
+#2 :if you’re giving turn by turn directions in real time, you really do need to know exactly where the user is so you can say “turn right in 20 meters” etc
+
+
+
+
+< a PositionOptions object> : optional third argument of getCurrentPosition()- method.
+-enableHighAccuracy :true might be slower
+-timeout : in milliseconds
+-maximumAge : in milliseconds : allows the device to answer immediately with a cached position
+
+For example, let’s say you call getCurrentPosition() for the first time, the user consents, and your success callback function is called with a position that was calculated at exactly 10:00 AM. Exactly one minute later, at 10:01 AM, you call getCurrentPosition() again with a maximumAge property of 75000
+avigator.geolocation.getCurrentPosition(
+  success_callback, error_callback, {maximumAge: 75000});
+you don’t necessarily need the user’s current location. You would be satisfied with knowing where they were 75 seconds ago (75000 milliseconds). The device knows where the user was 60 seconds ago (60000 milliseconds), because it calculated their location after the first time you called getCurrentPosition(). So the device doesn’t bother to recalculate the user’s current location. It just returns exactly the same information it returned the first time: same latitude and longitude, same accuracy, and same timestamp (10:00 AM).
+
+
+
+---------
+watchPosition(<onSuccess>) :Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car)
+
+clearWatch() :Stops the watchPosition() method.
+
+
+-----------
+IE8 support - geoPositon.js
+is an open source, MIT-licensed JavaScript library that smooths over the differences between the W3C geolocation API, IP geolocation services, and the APIs provided by mobile platforms
+
+ 
+

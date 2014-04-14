@@ -1,0 +1,116 @@
+#ginnipig
+{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(154, 154, 187);
+    border: 2px black dotted;
+        
+}
+
+/* 2D TRANSFORMS */
+
+.rotate2dStyle
+{
+    -webkit-transform: rotate(75deg);
+}
+
+
+.skew2dStyle
+{
+    -webkit-transform: skew(30deg,40deg);
+    
+}
+
+
+.scale2dStyle
+{
+    -webkit-transform: scale(1,3);
+    
+}
+
+.translate2dStyle
+{
+    -webkit-transform: translate(30px,50px);
+}
+
+/*
+matrix(1,0,0,1,0,0)
+matrix(scaleX,skewX,skewY,ScaleY,translateX,translateY)
+to rotate keep same value for skewX and skewY. Just 1 shd be negative and other shd be positive
+
+*/
+.matrix2dStyle
+{
+    -webkit-transform: matrix(1,0,0,1,0,0)
+}
+
+
+/* 3D TRANSFORMS */
+.rotate3dStyle
+{
+    -webkit-transform: rotate3d(10,20,30,75deg);
+}
+
+
+.scale3dStyle
+{
+    -webkit-transform: scale3d(1,2,3);
+}
+
+
+
+.translate3dStyle
+{
+    -webkit-transform: translate3d(10px,20px,30px);
+}
+
+
+.originStyle
+{
+    -webkit-transform-origin: 25% 20%;
+    -webkit-transform: rotate(75deg);
+    
+}
+
+.transtionStyle
+{
+    
+    -webkit-transition: width  , height ;
+    -webkit-transition-duration: 4s;
+}
+
+
+.moveDiv 
+{
+    width: 400px !important;
+    height: 200px !important;
+    
+}
+
+
+
+.loopedAnimation
+{
+    -webkit-animation: myfirst 5s infinite; /* Chrome, Safari, Opera */
+    animation: myfirst 5s;
+}
+
+
+@-webkit-keyframes myfirst
+{
+    0%   {background: red;}
+    45%  {background: yellow; -webkit-transform: translate(30px,50px);}
+    65%  {background: yellow; -webkit-transform: translate(130px,150px);}
+    85%  {background: yellow; -webkit-transform: translate(230px,250px);}
+    100%  {background: yellow; -webkit-transform: translate(30px,50px);}
+}
+
+/* Standard syntax */
+@keyframes myfirst
+{
+    0%   {background: red;}
+    45%  {background: yellow; transform: translate(30px,50px);}
+    65%  {background: yellow; transform: translate(130px,150px);}
+    85%  {background: yellow; transform: translate(230px,250px);}
+    100%  {background: yellow; transform: translate(30px,50px);}
+}
