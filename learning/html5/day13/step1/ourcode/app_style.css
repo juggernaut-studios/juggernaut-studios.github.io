@@ -1,0 +1,35 @@
+.company-logo-image
+{
+    background-image: url(../img/1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.top-panel-logo
+{
+    height: 206px;
+}
+
+.bottom-panel-logo
+{
+    height: 206px;
+}
+
+.spacing-between-element
+{
+ margin-top: 5%;   
+}
+
+
+.minor-padding
+{
+    padding: 2%;
+}
+
+.timer-box
+{
+    margin-left: 60%;
+    border: 1px black solid;
+    text-align: center;
+}

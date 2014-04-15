@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Canvas Sample Game</title>
+</head>
+    
+    <body>
+    <h1>Game Development</h1>    
+    <canvas id="mycanvas" width="500" height="400" style="border:2px dotted"></canvas>
+        
+    <script>
+        
+        var  canvasEle, ctx , tank={}, enemies, bullet=[],bulletID=0,enemyCntr=0, tankHitCountr=0,enemiesKilled=0;;
+        
+        window.onload = function()
+        {
+            initGame();
+        }
+        
+        
+        function initGame ()
+        {
+            //handle to canvas context
+            canvasEle = document.getElementById("mycanvas");
+            ctx = canvasEle.getContext("2d");
+            
+            tank = {};
+            tank.width = 50;
+            tank.height = 30;
+            tank.x = 0;
+            tank.y = canvasEle.height-tank.height;
+            tank.color = "green";
+            tank.tunnelHeight = 15;
+            tank.tunnelWidth = 10;
+            tank.speed = 10;
+            
+            
+            bullet={};
+            
+            
+            enemies = {};
+            
+            document.addEventListener("keydown",keyDownHandler,false);
+            
+            setInterval(function()
+                        {
+                            paintScreen();    
+                        },
+                        50);
+            
+
+            ctx.font="20px Georgia";
+
+            generateEnemy();
+            
+            
+        }
+        
+        
+        function generateEnemy()
+        {
+            
+            
+            enemyCntr++;
+            
+            enemies[enemyCntr]={
+                x:getRandomInt(50,500),
+                y:0,
+                width:10,
+                height:10,
+                color:"white",
+                speed:5
+            }
+            
+            setTimeout(generateEnemy,5000);
+            
+        }
+        
+        
+        function keyDownHandler(evt)
+        {
+            console.log(evt.keyCode)
+            switch(evt.keyCode)
+            {
+                    case 37:// left
+                        tank.x -= tank.speed;
+                        
+                    if(tank.x < 0)
+                        tank.x = 0;
+                    
+                    //paintScreen()
+                    break;
+                    case 38:// top
+                    break;
+                    case 39:// rite
+                    tank.x += tank.speed
+                    console.log(canvasEle.width)
+                    if(tank.x +tank.width > canvasEle.width)
+                        tank.x = canvasEle.width - tank.width;
+                 
+                    //paintScreen()    
+                    break;
+                    case 40:// bottom
+                    break;
+                    case 32 :
+                    //space hit
+                    generateBullet();
+                    break;
+            }
+            
+        }
+        
+        
+        function generateBullet()
+        {
+            bulletID++;
+            bullet[bulletID] ={
+                    x : tank.x+tank.width/3,
+                    y : tank.y-tank.tunnelHeight,
+                    width : 5,
+                    height: 5,
+                    color:"red",
+                    speed:3
+            }
+        }
+        
+        
+        function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+        
+        
+        function paintScreen()
+        {
+            //draw screen
+            ctx.fillStyle="black";
+            ctx.clearRect(0,0,canvasEle.width,canvasEle.height);
+            ctx.fillRect(0,0,canvasEle.width,canvasEle.height);
+            
+            
+            //
+            if(tank !== undefined)
+            {
+                drawTank();
+            }
+            
+            
+            if(enemies !== undefined)
+            {
+                drawEnemy();
+            }
+            for(var key in bullet)
+            {
+                if(bullet[key] !== undefined)
+                {
+                    if(bullet[key].y < 0)
+                    {
+                        delete bullet[key];
+                    }
+                    else
+                    {
+                        var mT =bullet[key];
+
+                        ctx.fillStyle = mT.color;
+                        ctx.fillRect(mT.x,mT.y,mT.width,mT.height)
+                        bullet[key].y -= bullet[key].speed;    
+                    }
+                }
+            }
+            
+            drawText();
+        }
+        
+        function drawTank()
+        {
+            ctx.fillStyle = tank.color;
+            ctx.fillRect(tank.x,tank.y,tank.width,tank.height);
+            ctx.fillRect(tank.x+tank.width/3,tank.y-tank.tunnelHeight,tank.tunnelWidth,tank.tunnelHeight);
+        }
+        
+        function hitTest (object1,arr)
+        {
+            var a = -1;
+            for(var i in arr)
+            {
+                var object2 = arr[i];
+                
+            if (object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x &&  object1.y < object2.y + object2.height && object1.y + object1.height > object2.y) {            // The objects are touching
+
+                        a=  i;
+                        break;
+
+            }
+            }
+            
+            return a;
+        }
+        
+        function drawEnemy ()
+        {
+            for(var key  in enemies)
+            {
+                
+                    if(enemies[key].y > canvasEle.height)
+                    {
+                        //already out of screen
+                        delete enemies[key];
+                    }
+                    else
+                    {
+                        var hitWithEnemy = hitTest(enemies[key],bullet)
+                        var hitWithTank = hitTest(enemies[key],[tank])
+                        if(hitWithTank === -1 && hitWithEnemy === -1)
+                        {
+                            var mt = enemies[key]
+                            ctx.fillStyle = mt.color;
+                            ctx.fillRect(mt.x,mt.y,mt.width,mt.height)
+                            enemies[key].y += enemies[key].speed;
+                        }
+                        else
+                        {
+                            
+                            delete enemies[key];
+                            if(hitWithEnemy !== -1)
+                            {
+                                delete bullet[key];
+                                enemiesKilled++;
+                                
+                            }
+                            else if(hitWithTank !== -1)
+                            {
+                                //
+                                tankHitCountr++;
+                                drawText();
+                            }
+                                
+                        }
+                    }
+                
+                
+            }
+        }
+        
+        
+        function drawText()
+        {
+            ctx.fillStyle ="white";
+            ctx.fillText("Tank Hit: "+tankHitCountr +"\n Enemies Killed "+enemiesKilled,100,50);
+        }
+    </script>    
+    </body>
+</html>
