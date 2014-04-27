@@ -1,0 +1,32 @@
+@media screen and (min-width: 319px) and (max-width: 321px) {
+	.page-bg{height:480px;}
+	.greater-than-img{width: 170px;height: 80px;}
+	.home-question-text {font-size: 1.1em;margin: 10% 0 0 5%;}
+	.std-btn{width:24%;font-size:16px;}
+	.home-girl-img{width: 100%;height: 210px;}
+	.quiz-number{width:6%;}
+	.question-text{font-size: 1.2em;}
+	.landing-para{font-size: 0.7em;}
+	.social-icon-container{width: 30px;	height: 30px;}
+	.ladder-img{width: 150px;height: 180px;}
+	.answer-text {width: 80%;}
+	.time-container{width: 15%;margin: 0 0 0 77%;}
+	.landing-intro-text{overflow-y:scroll;height:160px;}
+	#congrats-page .landing-intro-text{overflow-y:scroll;height:140px;}
+}
+@media screen and (min-width: 360px) and (max-width: 420px) {
+	.page-bg{height:480px;}
+	.greater-than-img{width: 190px;height: 110px;}
+	.home-question-text {font-size: 1.2em;margin: 10% 0 0 5%;}
+	.std-btn{width:22%;font-size:16px;}
+	.home-girl-img{width: 100%;height: 320px;}
+	.quiz-number{width:6%;}
+	.question-text{font-size: 1.3em;}
+	.landing-para{font-size: 0.8em;}
+	.social-icon-container{width: 30px;	height: 30px;}
+	.ladder-img{width: 150px;height: 180px;}
+	.answer-text {width: 80%;}
+	.time-container{width: 15%;margin: 0 0 0 77%;}
+	.landing-intro-text{overflow-y:scroll;height:160px;}
+	#congrats-page .landing-intro-text{overflow-y:scroll;height:140px;}
+}

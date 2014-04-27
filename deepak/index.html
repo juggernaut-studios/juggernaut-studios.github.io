@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body class='page-bg'>
+		<div id='home_page'>
+			<div class='greater-than-img'></div>
+			<div class='home-question-text'>Why do smart women want to work at Accenture?</div>
+			<div class='home-btn-container'>
+				<div class='std-btn first-left-btn' onclick='onStartGame()'>Start Game</div>
+				<div class='std-btn intro-btn' onclick='onIntroduction()'>Introduction</div>
+			</div>
+			<div class='home-girl-img'></div>
+		</div>
+		<div id='landing-page' style='display:none'>
+			<div class='landing-title'>Introduction</div>
+			<div class='landing-intro-text'>
+				<div class='landing-para'>At Accenture, we know that the success of our women around the glob is the key to our success as a company. That's why we are committed to supporting thrie wunque professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
+				<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. The faster you correctly answer these [xx] multiple choice questions, the heigher you change of earning a 'gold star' and bgagging rights!</div>
+			</div>
+			<div class='std-btn first-left-btn' onclick='onContinue()'>Continue</div>
+			<div class='ladder-img landing-ladder-container'></div>
+		</div>
+		<div id='quiz-page' style='display:none'>
+			<div class='time-container-layout'>
+				<div class='time-container'>01:47</div>
+			</div>
+			<div class='quiz-number-container'>
+				<div class='quiz-number first-quiz-number'>1</div>
+				<div class='quiz-number'>2</div>
+				<div class='quiz-number'>3</div>
+				<div class='quiz-number'>4</div>
+				<div class='quiz-number'>5</div>
+				<div class='quiz-number'>6</div>
+				<div class='quiz-number'>7</div>
+				<div class='quiz-number'>8</div>
+				<div class='quiz-number'>9</div>
+				<div class='quiz-number'>10</div>
+			</div>
+			<div class='question-text'>How many women work at Accenture?</div>
+			<div class='option-container'>
+				<div class='option-text first-option'>
+					<span>a.<span>
+					<span>>30,000</span>
+				</div>
+				<div class='option-text'>
+					<span>b.<span>
+					<span>>40,000</span>
+				</div>
+				<div class='option-text'>
+					<span>c.<span>
+					<span>>60,000</span>
+				</div>
+				<div class='option-text'>
+					<span>d.<span>
+					<span>>100,000</span>
+				</div>
+			</div>
+			<div class='std-btn first-left-btn' onclick='onAnswerSubmit()'>Submit</div>
+		</div>
+		<div id='answer-page' style='display:none'>
+			<div class='time-container-layout'>
+				<div class='time-container'>01:47</div>
+			</div>
+			<div class='quiz-number-container'>
+				<div class='quiz-number first-quiz-number'>1</div>
+				<div class='quiz-number'>2</div>
+				<div class='quiz-number'>3</div>
+				<div class='quiz-number'>4</div>
+				<div class='quiz-number'>5</div>
+				<div class='quiz-number'>6</div>
+				<div class='quiz-number'>7</div>
+				<div class='quiz-number'>8</div>
+				<div class='quiz-number'>9</div>
+				<div class='quiz-number'>10</div>
+			</div>
+			<div class='answer-container'>
+				<div class='answer-title'>Correct</div>
+				<div class='answer-text'>To learn more about the ways Accenture creates a welcoming workspace for women, go to [Link to be provided by clent]</div>
+			</div>
+			<div class='std-btn first-left-btn' onclick='onAnswerContinue()'>Continue</div>
+		</div>
+		<div id='congrats-page' style='display:none'>
+			<div class='landing-title'>Congratulations!</div>
+			<div class='landing-intro-text'>
+				<div class='landing-para'>You've won the x star in x seconds. Play again to  get a better score and share with  friends to see if they can beat your score!</div>
+				<div class='landing-para'>Read more about the Inclusion and Diversity journey at Accenture. (insert url)</div>
+				<div class='landing-para'>If all of this interests you, click here to view  our open  jobs  and apply. (insert url)</div>
+			</div>
+			<div>
+				<div class='social-icon-container linked-in-icon'></div>
+				<div class='social-icon-container twitter-icon'></div>
+				<div class='social-icon-container facebook-icon'></div>
+			</div>
+			<div class='ladder-img congrats-ladder-container'></div>
+		</div>
+	</body>
+</html>

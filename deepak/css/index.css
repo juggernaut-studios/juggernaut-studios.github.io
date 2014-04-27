@@ -1,0 +1,142 @@
+.page-bg{
+	background:#2A4385;
+	height:800px;
+	margin:0px;
+	overflow:hidden;
+}
+.greater-than-img{
+	background-image:url('./../images/grtr.png');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	width: 244px;
+	height: 131px;
+	margin: 15% 0 0 5%;
+}
+.home-girl-img{
+	background-image:url('./../images/bg-girl.png');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	width: 480px;
+	height: 345px;
+	position:absolute;
+	bottom:0%;
+}
+.ladder-img{
+	background-image:url('./../images/ladder.png');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	width: 220px;
+	height: 390px;
+	}
+.landing-ladder-container{
+	margin: 3% auto;
+}
+.home-question-text{
+	font-size: 1.5em;
+	color: #FFF;
+	width: 75%;
+	margin: 20% 0 0 5%;
+}
+.std-btn{
+	width: 20%;
+	color: #FFF500;
+	border: 3px solid #FFF500;
+	padding: 1%;
+	font-size: 20px;
+	display: inline-block;
+	margin-top:5%;
+	text-align: center;
+}
+.first-left-btn{
+	margin-left:5%;
+}
+.intro-btn{
+	margin-left:2%;
+}
+.landing-title{
+	font-size:1.5em;
+	color:#FFF500;
+	margin:10% 0 0 5%;
+}
+.landing-para{
+	color: #FFF;
+	width: 85%;
+	margin: 3% 0 0 5%;
+	font-size:17px;
+}
+.time-container{
+	width: 12%;
+	color: #FFF500;
+	border: 3px solid #FFF500;
+	padding: 0.7%;
+	font-size: 18px;
+	margin: 0 0 0 80%;
+	text-align: center;
+}
+.time-container-layout{
+	margin-top:7%;
+}
+.first-quiz-number{
+	margin-left:5% !important;
+}
+.quiz-number-container{
+	margin-top: 20%;
+	height: 25px;
+}
+.quiz-number{
+	border: 1px solid #FFF500;
+	display: inline-block;
+	width: 7%;
+	margin-left: 1%;
+	text-align: center;
+	color: #FFF;	
+}
+.question-text{
+	margin: 7% 0 0 5%;
+	font-size: 1.8em;
+	width: 60%;
+	color: #FFF500;
+}
+.option-text{
+	margin: 1% 0 0 5%;
+	color: #FFF;
+}
+.first-option{
+	margin-top:3% !important;
+}
+.answer-container{
+	min-height: 200px;
+	margin: 5% 5% 0 5%;
+	background: #FFF500;
+}
+.answer-title{
+	font-size: 1.5em;
+	padding-top: 5%;
+	margin-left: 5%;
+}
+.answer-text{
+	width: 75%;
+	margin: 1% 0 0 5%;
+	font-size: 18px;
+}
+.social-icon-container{
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	width: 37px;
+	height: 37px;
+	display: inline-block;
+	margin-top: 8%;
+}
+.linked-in-icon{
+	background-image:url('./../images/linked-in.png');	
+	margin-left:5%;
+}
+.facebook-icon{
+	background-image:url('./../images/facebook.png');
+}
+.twitter-icon{
+	background-image:url('./../images/twitter.png');
+}
+.congrats-ladder-container{
+	margin: 10% auto;
+}

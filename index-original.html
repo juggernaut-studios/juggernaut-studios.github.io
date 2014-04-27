@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057) -->
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JnS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="thumbnail_image" />
+		<meta name="author" content="">
+
+		<script>
+			clickHandler = function(cmd) {
+				window.location = "learning/html5/index.html"
+			}
+		</script>
+        
+        <style>
+        
+        /*social sharing buttons*/
+.social a{
+    display:inline-block;
+    margin:10px 10px 5px 0;
+    padding:10px 15px;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -o-border-radius:5px;
+    -webkit-border-radius:5px;
+    -ms-border-radius:5px;
+}
+/*Twitter*/
+.twitter{
+    background:#9AE4E8;
+}
+/*Facebook*/
+.facebook{
+    background:#3B5998;
+}
+/*Google Plus*/
+.google-plus{
+    background:#D34836;
+}
+        
+        </style>
+	</head>
+
+	<body>
+		<h1> Yet To Update </h1>
+		<hr />
+		<button onclick="clickHandler(1)">
+			HTML5
+		</button>
+		<hr />
+        
+        
+<div class=”social”>
+<p>Share this post on:</p>
+<!–Twitter–>
+<a class=”twitter” href='http://twitter.com/home?status=Testing' title='Share this post on Twitter!' target=”_self”>Twitter</a>
+
+<a class=”facebook” target="_blank" href='http://www.facebook.com/sharer.php?u=http://juggernaut-studios.com&amp;t=Testing' title=”Share this post on Facebook!” >Facebook</a>
+
+<a class=”google-plus” target=”_self” href=”https://plus.google.com/share?url=http://appstore.com/”>Google+</a>
+    
+    
+    <br>
+    DUmmy Share POC's
+    <br>
+    
+    <button onclick="clickForLinks (1)"> TWITTER </button><br>
+    <button onclick="clickForLinks (2)"> Facebook </button><br>
+    <button onclick="clickForLinks (3)"> Google Plus </button><br>
+    <button onclick="clickForLinks (4)"> LinkedIn </button><br>
+    <a title="Share this article/post/whatever on Facebook" 
+    href="http://www.facebook.com/sharer.php?s=100&p[url]=http://juggernaut-studios.com/&p[images][0]=the image you want to share&p[title]=the title you want to share&p[summary]=the description/summary you want to share" 
+    target="_blank">
+     <img src="http://globalaccessibilitynews.com/files/2012/05/W3C_logo.jpg" 
+       alt="Share on Facebook" />
+</a>
+    
+</div>
+        
+        
+        <script>
+        
+        clickForLinks = function(cmd)
+        {
+            var url="";
+            switch(cmd)
+            {
+                case 1:
+                    //twitter
+                    url=  "http://twitter.com/home?status=Testing"
+                    break;
+                    case 2:
+                    //facebook
+    url=  "http://www.facebook.com/sharer.php?u=http://appstore.com&amp;t=Testing"
+                    break;
+                    case 3:
+                    //google plus
+         url= "https://plus.google.com/share?url=http://appstore.com/"
+                    break;
+                    case 4:
+                    //https://developer.linkedin.com/documents/share-linkedin
+url='http://www.linkedin.com/shareArticle?mini=true&url=http%3A//google.com&title=testing the simple share&summary=any test&source=juggernaut-studios.com'
+                    break;
+            }
+            
+            window.open(url,"_blank");
+            
+        }
+        
+        
+        </script>
+	</body>
+</html>
