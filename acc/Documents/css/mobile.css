@@ -8,7 +8,10 @@
 	margin:0px;
 	overflow:hidden;
 }
-
+body
+{
+	margin:0px;
+}
 .page-bg {
 	background: #2A4385;
 	
@@ -104,12 +107,12 @@
 }
 .time-container{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	width: 12%;
+	width: 20%;
 	color: #FFF500;
 	border: 3px solid #FFF500;
 	padding: 0.7%;
 	font-size: 18px;
-	margin: 0 0 0 80%;
+	margin: 0 0 0 70%;
 	text-align: center;
 }
 .time-container-layout{
@@ -121,9 +124,9 @@
 }
 .quiz-number{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	border: 1px solid #FFF500;
+	border: 2px solid #FFF500;
 	display: inline-block;
-	width: 7%;
+	width: 6%;
 	margin-right: 1%;
 	text-align: center;
 	color: #FFF500;
@@ -216,7 +219,7 @@
 	.question-text{font-size: 1.2em;}
 	.landing-para{width:90%;}
 	.social-icon-container{width: 30px;	height: 30px;}		
-	.time-container{width: 15%;margin: 0 0 0 77%;}
+	.time-container{width: 20%;margin: 0 0 0 70%;}
 	.landing-intro-text{overflow-y:scroll;height:160px;}
 	#congrats-page .landing-intro-text{overflow-y:scroll;height:140px;}
 
@@ -228,7 +231,7 @@
 	.question-text{font-size: 1.3em;}
 	.landing-para{width:90%;}
 	.social-icon-container{width: 30px;	height: 30px;}	
-	.time-container{width: 15%;margin: 0 0 0 77%;}
+	.time-container{width: 20%;margin: 0 0 0 70%;}
 	.landing-intro-text{overflow-y:scroll;height:160px;}
 	#congrats-page .landing-intro-text{overflow-y:scroll;height:140px;}
 }
