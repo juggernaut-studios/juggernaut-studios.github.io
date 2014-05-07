@@ -31,7 +31,7 @@ LandingScreen.prototype = {
 	},
 
 	clickHandler : function(evt) {
-		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+		var target = (evt.currentTarget) ? evt.currentTarget : evt.srcElement;
 		trace("Landing Page: CLICKED :" + target.id);
 		switch(target.id) {
 			case 'landing_btn_start':

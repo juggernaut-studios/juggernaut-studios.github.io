@@ -46,7 +46,7 @@ var question_data = {
 		option_3 : "Security guard for night travel",
 		option_4 : "All of these",
 		correct_answer : "4",
-		explanation : 'To learn more about the ways Accenture creates a welcoming workspace for women, go to [link to be provided by client]'
+		explanation : 'To learn more about the ways Accenture creates a welcoming workspace for women, go to <a href="http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx" target="_blank">http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx </a>'
 	}, {
 		question : "What was Accenture’s theme for International Women’s Day 2014?",
 		option_1 : "Growing Your Career Capital",
@@ -195,13 +195,13 @@ var resource_data = {
 		'end' : 'endPage'
 	},
 	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
-	appMode : 1, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
+	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	appTimer : 180, // its seconds
 	bench_mark : [4, 8, 10], // scoring mechanism range
 	no_of_stars : ["Bronze", "Silver", "Gold"], // scoring mechanism award
 	per_question : 1, // perquestion hike,
 	url_diversity : 'http://careers.accenture.com/in-en/team-culture/diversity/Pages/index.aspx',
 	url_jobs : 'http://careers.accenture.com/in-en/Pages/index.aspx',
-	social_site_content : 'I scored <%badge_won%> stars in <%time_taken%> minutes. Are you a ready to play  this fun quiz by Accenture too?. You can play it here <%url_for_game%>'
+	social_site_content : 'I scored <%badge_won%> stars in <%time_taken%> seconds. Are you a ready to play  this fun quiz by Accenture too?. You can play it here <%url_for_game%>'
 
 }

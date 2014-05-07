@@ -45,7 +45,8 @@ function ApplicationWrapper() {
 	this.mHTMLTemplate = null;
 
 	//this.jsAnimManager = new jsAnimManager(10);
-	resource_data.usemobileimages(isDesktop);
+	if(resource_data !== undefined)
+	resource_data.usemobileimages(isDesktopFlag);
 	this.setValues();
 	return this
 }
@@ -101,7 +102,7 @@ ApplicationWrapper.prototype = {
 		this.mCurrentScreen.onWrapperPush('timer', {
 			val : this.mAppDisplayTimer
 		});
-		console.log(" TIMER SHOWN")
+		
 		this.mAppTimerComponent = setTimeout(this.onProgressTimer.bind(this), (1000));
 
 	},
@@ -341,7 +342,7 @@ function doOnOrientationChange() {
 window.addEventListener ? window.addEventListener('orientationchange', doOnOrientationChange) : window.attachEvent && window.attachEvent("onorientationchange", doOnOrientationChange);
 
 window.onresize = function(event) {
-	if (_gMainApplication !== undefined) {
+	/*if (_gMainApplication !== undefined) {
 		var w, h;
 		if (window.innerWidth) {
 			w = window.innerWidth;
@@ -354,7 +355,7 @@ window.onresize = function(event) {
 			w : w,
 			h : h
 		});
-	}
+	}*/
 }
 /*
  ApplicationWrapper.prototype.startTheGamePlay = function() {

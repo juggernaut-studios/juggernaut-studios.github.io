@@ -1,10 +1,9 @@
 @font-face {
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
-	src:url('./fonts/RotisSansSerifforACCN-Bold.eot?')format('embedded-opentype');
-	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
-	src: url('./fonts/RotisSansSerifforACCN-Bold.woff')  format('woff');
+	src:url('./fonts/Rotis-SansSeriffor-ACCN-Bold.eot');
+	src:url('./fonts/Rotis-SansSeriffor-ACCN-Bold.eot?') format('embedded-opentype');
+	src: url('./fonts/Rotis-SansSeriffor-ACCN-Bold.otf') format('embedded-opentype');
 }
-
 .body-bg {
 	margin: 7% auto;
 }
@@ -17,7 +16,7 @@
 .home-page-bg{
 	background-size: 100% 100%;
     background-repeat: no-repeat;
-	height: 655px;
+	height: 595px;
 	width: 900px;
 	margin: auto;
 }
@@ -68,7 +67,7 @@
 	font-size: 2em;
 	color: #FFF;
 	width: 35%;
-	margin: 0 0 0 8%;
+	margin: 7% 0 0 8%;
 	padding-top:20%;
 }
 .std-btn {
@@ -168,7 +167,7 @@
 }
 .answer-container {
 	min-height: 230px;
-	margin: 0 5% 0 8%;
+	margin: 5% 5% 0 8%;
 	background: #FFF500;
 }
 .answer-title {
@@ -194,7 +193,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	width: 900px;
-	height: 655px;
+	height: 595px;
 	margin:auto;
 }
 .ladder-img, .ladding-ladder-img {
@@ -212,16 +211,13 @@
 }
 .question-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	margin: 7% 0 3% 8%;
+	margin: 7% 0 0 8%;
 	font-size: 2em;
 	width: 85%;
 	color: #FFF500;
-	
 }
 .first-option {
-	
-	
-	
+	margin-top: 3% !important;
 }
 .answer-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;

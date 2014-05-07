@@ -132,7 +132,7 @@ GameScreen.prototype = {
 
 	},
 
-	clickHandler : function(evt) {
+	clickHandler : function(event) {
 		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
 		trace("GAME Page: CLICKED :" + target.id);
 		switch(target.id) {

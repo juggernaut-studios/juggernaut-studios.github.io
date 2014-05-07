@@ -17,8 +17,10 @@ EndScreen.prototype = {
 
 		var arrT = this.mApplication.getFinalScreenMsg(), resourceKey, sHTML = this.mApplication.renderTemplate('end_screen_ui', {
 			main_ending_msg : arrT[0],
+			
 			n_second : arrT[1],
 			n_star : arrT[2],
+			url_app:location.href,
 			url_diversity:resource_data.url_diversity,
 			url_jobs:resource_data.url_jobs,
 		});
@@ -53,13 +55,15 @@ EndScreen.prototype = {
 		//replace time taken
 		str = str.replace("<%time_taken%>",this.storeScore[1]);
 		//add link
-		str = str + ":"+location.href;
+		str = str.replace("<%url_for_game%>",location.href);
+		
+		str = encodeURIComponent(str);
 		
 		return str
 	
 		
 	},
-	clickHandler : function(evt) {
+	clickHandler : function(event) {
 		var url ="";
 		var publishingURL = location.href;
 		var publishingContent = this.manipulateSSNContent();
@@ -67,7 +71,24 @@ EndScreen.prototype = {
 		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
 		switch(target.id) {
 			case 'facebook':
-				url = "http://www.facebook.com/sharer.php?u="+publishingURL+"&amp;t="+publishingContent;
+			/*
+			 https://www.facebook.com/sharer/sharer.php
+			?s=100
+			&p[title]=Example Title
+			&p[summary]=Example description text
+			&p[url]=http://url-being-shared.com/
+			&p[images][0]=http://url-of-image.com/image.jpg
+			
+			"https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=An%20example%20caption&link=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fdialogs%2F&redirect_uri=https://developers.facebook.com/tools/explorer" 
+			 * */
+				//url = "http://www.facebook.com/sharer.php?u="+publishingURL+"&amp;t="+publishingContent;
+				//url = "https://www.facebook.com/sharer/sharer.php?s=100&p[title]=Example%20Title&p[summary]=Example%20Title&p[url]=http://google.com/&p[images][0]=http://www.w3schools.com/images/w3logotest2.png"
+				//url = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption="+publishingContent+"&link="&redirect_uri=https://developers.facebook.com/tools/explorer" 
+				
+				//working
+				//url = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=WQQ&description=" +publishingContent+ "&link=http://primary.careers-edit.accenture.com/&redirect_uri=http://facebook.com"
+				//working as expected... with self app
+				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com"
 				window.open(url,"_blank");
 				break;
 			case 'twitter':
