@@ -226,6 +226,8 @@ body{
 	.social-icon-container{width: 30px;	height: 30px;}	
 	.time-container{width: 15%;margin: 0 0 0 77%;}
 }
+
+
 @media screen and (min-height: 600px) and (max-height: 800px) {
 	/*#congrats-page .landing-intro-text {
 		overflow-y: scroll;
