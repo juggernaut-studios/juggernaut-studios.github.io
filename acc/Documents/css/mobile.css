@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
-	src: url('./../fonts/RotisSansSerifforACCN-Bold.otf');
+	src: url('./../css/fonts/RotisSansSerifforACCN-Bold.otf');
 }
 body{
 	margin:0px;
@@ -19,7 +19,7 @@ body{
 	width: 100%;
 }
 .greater-than-img{
-	background-image:url('./../images/grtr.png');
+	xbackground-image:url('./../images/grtr.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	width: 244px;
@@ -27,7 +27,7 @@ body{
 	margin: 15% 0 0 5%;
 }
 .home-page-bg{
-	background-image:url('./../images/m-bg-girl.png');
+	xbackground-image:url('./../images/m-bg-girl.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	height: 100%;
@@ -44,14 +44,14 @@ body{
 	text-decoration: inherit;
 }
 .ladding-ladder-img{
-	background-image:url('./../images/SidePanel.png');
+	xbackground-image:url('./../images/SidePanel.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	width: 185px;
 	height: 292px;
 }
 .congrats-page-bg{
-	background-image:url('./../images/m-bg-congrats.png');
+	xbackground-image:url('./../images/m-bg-congrats.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	
@@ -142,6 +142,7 @@ body{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	margin: 1% 0 2% 5%;
 	color: #FFF;
+	cursor:pointer;
 }
 .first-option{
 	margin-top:3% !important;
@@ -174,20 +175,20 @@ body{
 	margin-top: 8%;
 }
 .linked-in-icon{
-	background-image:url('./../images/linked-in.png');	
+	xbackground-image:url('./../images/linked-in.png');	
 	margin-left:5%;
 }
 .facebook-icon{
-	background-image:url('./../images/facebook.png');
+	xbackground-image:url('./../images/facebook.png');
 }
 .twitter-icon{
-	background-image:url('./../images/twitter.png');
+	xbackground-image:url('./../images/twitter.png');
 }
 .congrats-ladder-container{
 	margin: 7% auto;
 }
 .award-img{
-	background-image:url('./../images/award.png');
+	xbackground-image:url('./../images/award.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	width: 175px;
@@ -199,7 +200,7 @@ body{
 	border:1px solid #FFF;
 }
 .incorrect-answer{
-	background-image:url('./../images/cross-img.png');
+	xbackground-image:url('./../images/cross-img.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	width: 24px;
