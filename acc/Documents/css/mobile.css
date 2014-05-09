@@ -161,6 +161,7 @@ body{
 	width: 90%;
 	margin: 1% 0 0 5%;
 	font-size: 1.1em;
+	padding-bottom:2%;
 }
 .social-icon-container{
 	background-size: 100% 100%;
@@ -279,6 +280,9 @@ body{
 	}
 	.quiz-number{
 		width:7.8%;
+		background-repeat: no-repeat;
+		background-size: 80% 80%;
+		background-position: 59%;
 	}
 	.answer-container{
 		margin: 5% 7% 0 5%;
