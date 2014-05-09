@@ -26,7 +26,7 @@ LandingScreen.prototype = {
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
-		
+		$("#"+this.mDivName).addClass('home-page-bg')			
 		//this.onScreenUpdate()	
 	},
 

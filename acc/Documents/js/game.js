@@ -159,6 +159,7 @@ GameScreen.prototype = {
 					document.getElementById('explanationContent').style.display = "block"
 
 				}
+				$("#"+this.mDivName).addClass('page-bg')	
 
 				break;
 			case 'game_continue_btn':
@@ -168,6 +169,7 @@ GameScreen.prototype = {
 				//document.getElementById('game_continue_btn').innerHTML = "Submit"
 				this.mApplication.manipulateQuestionCounter(1)
 				this.displayQuestion(true);
+				$("#"+this.mDivName).addClass('page-bg')
 
 				break;
 			case 'game_back_btn':
