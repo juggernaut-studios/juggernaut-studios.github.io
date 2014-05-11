@@ -77,7 +77,7 @@ body{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	color: #FFF500;
 	border: 3px solid #FFF500;
-	padding:  1.5% 0 0 0;
+	padding:  1.5% 0 1.5% 0;
 	font-size: 1em;
 	display: inline-block;
 	margin-top:10%;
@@ -127,7 +127,7 @@ body{
 	display: inline-block;
 	width: 6.5%;
 	margin-right: 1%;
-	padding-top:1.5%;
+	padding:1% 0;
 	text-align: center;
 	color: #FFF500;	
 }
