@@ -181,10 +181,18 @@ body{
 	
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	width: 74%;
-	height: 75%;
+	width: 170px;
+	height: 91px;
 	margin: auto;
 }
+
+.wqq-anchor-text {
+	font-family:Rotis-SansSeriffor-ACCN-Bold;
+	color: #FFF500;
+	font-size: 1em;
+	text-decoration: inherit;
+}
+
 
 .linked-in-icon{
 	xbackground-image:url('./../images/linked-in.png');	
