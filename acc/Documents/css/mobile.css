@@ -208,9 +208,7 @@ body{
 }
 
 @media screen and (min-width: 319px) and (max-width: 321px) {
-	body{
-	border:2px red solid;
-	}
+	
 	.greater-than-img{width: 170px;height: 80px;}
 	.home-question-text {font-size: 1.1em;margin: 10% 0 0 5%;padding-top:25%;}
 	.home-girl-img{width: 100%;height: 210px;}	
@@ -224,9 +222,7 @@ body{
 	
 }
 @media screen and (min-width: 360px) and (max-width: 420px) {
-	body{
-	border:3px yellow solid;
-	}
+	
 	.greater-than-img{width: 190px;height: 110px;}
 	.home-question-text {font-size: 1.2em;margin: 10% 0 0 5%;}
 	.home-girl-img{width: 100%;height: 320px;}	
@@ -238,18 +234,13 @@ body{
 
 
 @media screen and (min-height: 600px) and (max-height: 800px) {
-body{
-	border:2px white solid;
-	}
 	/*#congrats-page .landing-intro-text {
 		overflow-y: scroll;
 		height: 190px;
 	}*/
 }
 @media screen and (min-width: 480px) and (max-width: 680px) {
-	body{
-	border:2px green solid;
-	}
+	
 	.home-question-text{
 		margin: 5% 0 0 5%;
 		padding-top: 0%;
@@ -269,9 +260,6 @@ body{
 	}
 }
 @media screen and (min-width: 680px) and (max-width: 1080px) {
-body{
-	border:2px black solid;
-	}
 	.home-question-text{
 		margin: 10% 0 0 5%;
 		padding-top: 5%;
