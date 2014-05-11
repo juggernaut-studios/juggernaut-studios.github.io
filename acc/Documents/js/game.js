@@ -145,7 +145,7 @@ GameScreen.prototype = {
 
 					//$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-color", color);
 					if(!answer )
-					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-image", "url('"+this.crossImageURL+"')");
+					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background", "url('"+this.crossImageURL+"') center center no-repeat");
 
 					this.mCurrentSelectionAnswerID = -1
 					//hide the options and submit button

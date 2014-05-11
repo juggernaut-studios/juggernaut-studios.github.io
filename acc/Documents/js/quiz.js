@@ -45,8 +45,6 @@ function ApplicationWrapper() {
 	this.mHTMLTemplate = null;
 
 	//this.jsAnimManager = new jsAnimManager(10);
-	if(resource_data !== undefined)
-	resource_data.usemobileimages(isDesktopFlag);
 	this.setValues();
 	return this
 }
