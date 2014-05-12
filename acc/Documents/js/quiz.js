@@ -328,7 +328,7 @@ function doOnOrientationChange() {
 	switch(window.orientation) {
 		case -90:
 		case 90:
-			alert('landscape');
+			alert('App could be best viewed in portrait mode!');
 			break;
 		default:
 			alert('portrait');
