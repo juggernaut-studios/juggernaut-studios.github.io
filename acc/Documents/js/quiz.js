@@ -43,7 +43,8 @@ function ApplicationWrapper() {
 	this.mAppTimerComponent = 0;
 	this.mAppDisplayTimer = 0;
 	this.mHTMLTemplate = null;
-
+		
+	resource_data.usemobileimages(isDesktopFlag);	
 	//this.jsAnimManager = new jsAnimManager(10);
 	this.setValues();
 	return this

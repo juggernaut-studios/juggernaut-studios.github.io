@@ -77,7 +77,7 @@ body{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	color: #FFF500;
 	border: 3px solid #FFF500;
-	padding:  1.5% 0 1.5% 0;
+	padding:  1.5% 0.5% 0.5% 0.5%;
 	font-size: 1em;
 	display: inline-block;
 	margin-top:10%;
@@ -127,7 +127,7 @@ body{
 	display: inline-block;
 	width: 6.5%;
 	margin-right: 1%;
-	padding:1% 0;
+	padding-top:1.5%;
 	text-align: center;
 	color: #FFF500;	
 }
@@ -239,6 +239,9 @@ body{
 	.time-container{width: 20%;margin: 0 0 0 70%;}
 	.quiz-number{
 		width:6.15%;
+		}
+	.std-btn{
+		width:25%;
 		}
 	
 }
