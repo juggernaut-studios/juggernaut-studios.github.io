@@ -109,7 +109,7 @@ body{
 	width: 20%;
 	color: #FFF500;
 	border: 3px solid #FFF500;
-	padding: 0.7%;
+	padding: 1.5% 0.7% 0.7% 0.7%; 
 	font-size: 18px;
 	margin: 0 0 0 70%;
 	text-align: center;
