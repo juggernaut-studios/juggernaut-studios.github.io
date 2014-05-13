@@ -11,7 +11,7 @@ var question_data = {
 		option_3 : " >60,000",
 		option_4 : " >100,000",
 		correct_answer : "4",
-		explanation : '“Our commitment to inclusion and diversity at Accenture, including attracting, retaining and advancing women, is critical to being a high-performance business,” said Pierre Nanterme, Accenture Chairman and CEO'
+		explanation : '“Our commitment to inclusion and diversity at Accenture, including attracting, retaining and advancing women, is critical to being a high-performance business,” said Pierre Nanterme, Accenture Chairman and CEO.'
 
 	}, {
 		question : "Which magazine included Accenture in its list of ‘100 Best Companies for Working Mothers’ for 11 years in a row?",
@@ -185,7 +185,7 @@ var resource_data = {
 		'pb10' : ['game/progress/pb10.png', null],
 		'pb11' : ['game/progress/pb11.png', null],
 		
-		'header_common':['common/header.png', null]
+		'header':['common/header.png', null]
 		
 
 	},

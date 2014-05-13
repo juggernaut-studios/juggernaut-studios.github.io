@@ -44,10 +44,11 @@ function ApplicationWrapper() {
 	this.mAppDisplayTimer = 0;
 	this.mHTMLTemplate = null;
 
+	 if(resource_data !== undefined)
+         resource_data.usemobileimages(isDesktopFlag);	
 	//this.jsAnimManager = new jsAnimManager(10);
-	if(resource_data !== undefined)
-	resource_data.usemobileimages(isDesktopFlag);
 	this.setValues();
+	this.nextScene();
 	return this
 }
 
@@ -330,7 +331,7 @@ function doOnOrientationChange() {
 	switch(window.orientation) {
 		case -90:
 		case 90:
-			alert('landscape');
+			alert('App could be best viewed in portrait mode!');
 			break;
 		default:
 			alert('portrait');

@@ -29,7 +29,7 @@ LoadingScreen.prototype = {
 		this.mGameAssetLoader.addCompletionListener(this.onComplete.bind(this));
 
 		this.mGameAssetLoader.start();
-
+		
 		trace(" loading..");
 	},
 	onProgress : function(c) {

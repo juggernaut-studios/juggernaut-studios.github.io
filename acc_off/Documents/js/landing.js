@@ -15,8 +15,7 @@ LandingScreen.prototype = {
 		this.mApplication.showScreen(this.mDivName);
 
 		var resourceKey, sHTML = this.mApplication.renderTemplate('landing_screen_ui', {
-			img_landing_footer : resource_data.getPath("landing_footer"),
-			bg_header_image :resource_data.getPath("header_common")
+			img_landing_footer : resource_data.getPath("landing_footer")
 		});
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
@@ -27,7 +26,8 @@ LandingScreen.prototype = {
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
-		
+		$("#"+this.mDivName).addClass('home-page-bg')	;
+		$(".header-img").css("background-image","url("+resource_data.getPath("header")+")");		
 		//this.onScreenUpdate()	
 	},
 

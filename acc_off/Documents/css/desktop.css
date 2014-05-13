@@ -4,20 +4,10 @@
 	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
 	src: url('./fonts/RotisSansSerifforACCN-Bold.woff')  format('woff');
 }
-
-
-body
-{
-	font-size: 12px;
-}
-.header-component
-{
-	width: 100%;
-	height: 93px;
-	background-repeat: no-repeat;
-	margin-left:2%;
-	background-size: 96% 100%;
-	xbackground-image: url("../../PublishingImages/quiz/common/header.png");
+.ui-btn-text{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 .body-bg {
 	margin: 7% auto;
@@ -45,6 +35,14 @@ body
 .greater-than-image-container {
 	padding: 7% 0 0 5%;
 }
+.header-img {
+	
+	background-size: 96% 100%;
+	background-repeat: no-repeat;
+	width: 96%;
+	height: 93px;
+	margin-left:4%;
+}
 .greater-than-img {
 	background-image: url('./../images/grtr.png');
 	background-size: 100% 100%;
@@ -54,11 +52,11 @@ body
 }
 .congrats-container {
 	float: left;
-	width: 60%;
+	width: 70%;
 }
 .award-img-container {
 	float: right;
-	margin: 10% 10% 0 0;
+	margin: 10% 5% 0 0;
 }
 .congrats-greater-than-img {
 	background-image: url('./../images/grtr.png');
@@ -68,6 +66,10 @@ body
 	height: 131px;
 	margin: auto;
 }
+.congrats-page-bg .landing-intro-text {
+	max-height: 255px;
+	overflow-y: auto;
+}
 .award-img {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -75,40 +77,47 @@ body
 	height: 242px;
 }
 .congrats-greater-than-img-container {
-	padding-top: 0;
+	padding-top: 3%;
 }
 .home-question-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	font-size: 2em;
 	color: #FFF;
-	width: 35%;
-	margin: 0 0 0 8%;
-	padding-top:14%;
+	width: 25rem;
+	margin: 0 0 0 5%;
+	padding-top:15%;
+}
+.landing-intro-text{
+	max-height: 380px;
+	overflow-y: auto;
 }
 .std-btn {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	width: 12%;
+	width: 8rem;
 	color: #FFF500;
 	border: 3px solid #FFF500;
-	padding: 1%;
+	padding: 0.5%;
 	font-size: 1.5em;
 	display: inline-block;
 	margin-top: 5%;
 	text-align: center;
 	cursor: pointer;
 }
+.home-btn-container .first-left-btn {
+	margin-left: 5%;
+}
 .first-left-btn {
-	margin-left: 8%;
+	margin-left: 6%;
 }
 .intro-btn {
 	margin-left: 2%;
 }
 .landing-ladder-container {
-	margin: 5% 10% 0 0;
+	margin: 5% 5% 0 0;
 	float: right;
 }
 .button-text-container {
-	width: 60%;
+	width: 70%;
 	float: left;
 }
 .landing-continue-btn{width:20%;}
@@ -137,14 +146,14 @@ body
 }
 .question-option-button-container {
 	float: left;
-	width: 70%;
+	width: 66%;
 }
 .quiz-number-inner-container {
 	width: 90%;
 	padding: 1% 0.3%;
 }
 .first-quiz-number {
-	margin-left: 7% !important;
+	margin-left: 5.5% !important;
 }
 
 .quiz-number {
@@ -163,45 +172,48 @@ body
 }
 .question-ladder-container {
 	float: right;
-	margin: 5% 5% 0 0;
+	margin: 3% 5% 0 0;
 }
 .question-submit-btn {
 	width: 17%;
+}
+.question-submit-btn {
+	width: 22%;
 }
 .congrats-text{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	font-size:2.5em;
 	color:#FFF500;
-	padding:10% 0 0 8%;
+	padding:5% 0 0 5.5%;
 }
 .landing-title {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	font-size:2.5em;
 	color: #FFF500;
-	padding: 5% 0 0 5%;
+	padding: 5% 0 0 4%;
 }
 .answer-container {
-	min-height: 230px;
-	margin: 0 5% 0 8%;
+	max-height: 205px;
+	margin: 0 5% 0 6%;
 	background: #FFF500;
+	width:100%;
 }
 .answer-title {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	font-size: 2.5em;
-	padding-top: 5%;
+	font-size: 2em;
+	padding-top: 3%;
 	margin-left: 5%;
 }
 .answer-button-container {
 	float: left;
-	width: 92.7%;
+	width: 90%;
 }
 .option-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	margin: 1% 0 0 8%;
+	margin: 1% 0 0 6%;
 	color: #FFF;
-	font-size:1.5em;
+	font-size:1.2em;
 	padding-bottom: 1%;
-	font-size: 1.5em;
 	cursor: pointer;
 }
 .congrats-page-bg {
@@ -220,30 +232,26 @@ body
 .landing-para {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	color: #FFF;
-	width: 85%;
-	margin: 3% 0 0 8%;
+	width: 90%;
+	margin: 3% 0 0 6%;
 	font-size:1.5em;
 }
 .question-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	margin: 4% 0 3% 8%;
-	font-size: 2em;
-	width: 85%;
+	margin: 5% 0 3% 6%;
+	font-size: 1.5em;
+	width: 90%;
 	color: #FFF500;
-	
-}
-.first-option {
-	
-	
 	
 }
 .answer-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	width: 90%;
+	width: 94%;
 	margin: 1% 0 0 5%;
-	font-size: 1.5em;
-	height: 150px;
+	font-size: 1.3em;
+	height: 125px;
 	overflow-y: auto;
+	padding-bottom:2%;
 }
 .social-icon-container {
 	background-size: 100% 100%;
@@ -251,18 +259,18 @@ body
 	width: 36px;
 	height: 36px;
 	display: inline-block;
-	margin-top: 5%;
+	margin-top: 3%;
 	cursor: pointer;
 }
 .linked-in-icon {
-	background-image: url('./../images/linked-in.png');
-	margin-left:8%;
+	xbackground-image: url('./../images/linked-in.png');
+	margin-left:6%;
 }
 .facebook-icon {
-	background-image: url('./../images/facebook.png');
+	xbackground-image: url('./../images/facebook.png');
 }
 .twitter-icon {
-	background-image: url('./../images/twitter.png');
+	xbackground-image: url('./../images/twitter.png');
 }
 .congrats-ladder-container {
 	margin: 7% auto;

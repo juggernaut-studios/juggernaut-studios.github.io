@@ -23,7 +23,6 @@ EndScreen.prototype = {
 			url_app:location.href,
 			url_diversity:resource_data.url_diversity,
 			url_jobs:resource_data.url_jobs,
-			bg_header_image :resource_data.getPath("header_common")
 		});
 		
 		this.storeScore = arrT;
@@ -47,6 +46,9 @@ EndScreen.prototype = {
 		$("#facebook").css("background-image","url('"+resource_data.getPath("facebook")+"' )");
 		$("#twitter").css("background-image","url('"+resource_data.getPath("twitter")+"' )");
 		$("#linkedin").css("background-image","url('"+resource_data.getPath("linked_in")+"' )");
+		
+		$("#"+this.mDivName).addClass('congrats-page-bg')
+		$(".header-img").css("background-image","url("+resource_data.getPath("header")+")");
 	},
 	manipulateSSNContent :function()
 	{

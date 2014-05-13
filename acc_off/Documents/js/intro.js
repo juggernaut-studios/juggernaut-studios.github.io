@@ -15,7 +15,6 @@ IntroScreen.prototype = {
 		this.mApplication.showScreen(this.mDivName);
 
 		var resourceKey, sHTML = this.mApplication.renderTemplate('intro_screen_ui', {
-			bg_header_image :resource_data.getPath("header_common")
 		});
 		
 		document.getElementById(this.mDivName).innerHTML = sHTML;
@@ -27,6 +26,9 @@ IntroScreen.prototype = {
 		//addEventListener
 		//document.getElementById('intro_btn_continue').addEventListener("click", this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('intro_btn_continue','click',this.clickHandler.bind(this));
+		
+		$("#"+this.mDivName).addClass('page-bg')	
+		$(".header-img").css("background-image","url("+resource_data.getPath("header")+")");
 
 	},
 

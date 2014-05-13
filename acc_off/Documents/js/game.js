@@ -18,7 +18,6 @@ GameScreen.prototype = {
 		this.mApplication.showScreen(this.mDivName);
 
 		var resourceKey, sHTML = this.mApplication.renderTemplate('game_screen_ui', {
-			bg_header_image :resource_data.getPath("header_common")
 
 		});
 		document.getElementById(this.mDivName).innerHTML = sHTML;
@@ -33,7 +32,7 @@ GameScreen.prototype = {
 		//document.getElementById('game_continue_btn').style.backgroundImage = "url('" + resource_data.getPath("intro_continue_btn") + "')";
 		
 		//
-		
+		$(".header-img").css("background-image","url("+resource_data.getPath("header")+")");
 		
 		//addEventListener
 		this.mApplication.addEventHandler('game_continue_btn', 'click', this.clickHandler.bind(this));
@@ -146,7 +145,7 @@ GameScreen.prototype = {
 
 					//$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-color", color);
 					if(!answer )
-					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-image", "url('"+this.crossImageURL+"')");
+					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background", "url('"+this.crossImageURL+"') center center no-repeat");
 
 					this.mCurrentSelectionAnswerID = -1
 					//hide the options and submit button
@@ -160,6 +159,7 @@ GameScreen.prototype = {
 					document.getElementById('explanationContent').style.display = "block"
 
 				}
+				$("#"+this.mDivName).addClass('page-bg')	
 
 				break;
 			case 'game_continue_btn':
@@ -169,6 +169,7 @@ GameScreen.prototype = {
 				//document.getElementById('game_continue_btn').innerHTML = "Submit"
 				this.mApplication.manipulateQuestionCounter(1)
 				this.displayQuestion(true);
+				$("#"+this.mDivName).addClass('page-bg')
 
 				break;
 			case 'game_back_btn':
