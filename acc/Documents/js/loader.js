@@ -15,7 +15,9 @@ LoadingScreen.prototype = {
 	setUp : function() {
 		this.mApplication.showScreen(this.mDivName);
 
-		var resourceKey;
+		var resourceKey, sHTML = this.mApplication.renderTemplate('loading_screen_ui', {
+		});
+		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		this.mGameAssetLoader = new PxLoader();
 		for (resourceKey in resource_data.images) {
@@ -36,7 +38,7 @@ LoadingScreen.prototype = {
 		trace(a)
 	},
 	onComplete : function() {
-		trace("ASSET Loading COMPLETE!")
+		console.log("ASSET Loading COMPLETE!")
 		this.mApplication.nextScene();
 	},
 	onWrapperPush : function(cmd, data) {

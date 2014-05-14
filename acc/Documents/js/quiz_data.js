@@ -49,7 +49,7 @@ var question_data = {
 		explanation : 'To learn more about the ways Accenture creates a welcoming workspace for women, go to <a href="http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx" target="_blank">http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx </a>'
 	}, {
 		question : "What was Accenture’s theme for International Women’s Day 2014?",
-		option_1 : "Growing Your Career Capital",
+		option_1 : "Knowing and Growing Your Career Capital",
 		option_2 : "Working Women of the World Unite",
 		option_3 : "Learning to Say Yes to Success",
 		option_4 : "Lean In",
@@ -194,8 +194,8 @@ var resource_data = {
 		'game' : 'gamePage',
 		'end' : 'endPage'
 	},
-	htmlentity : [ 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
-	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
+	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
+	appMode : 1, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	appTimer : 180, // its seconds
 	bench_mark : [4, 8, 10], // scoring mechanism range
 	no_of_stars : ["Bronze", "Silver", "Gold"], // scoring mechanism award

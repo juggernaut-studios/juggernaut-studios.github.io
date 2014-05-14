@@ -5,6 +5,11 @@
 body{
 	margin:0px;
 }
+.ui-btn-text{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
 .body-bg{
 	background:#2A4385;
 	height:100%;
@@ -82,7 +87,7 @@ body{
 	display: inline-block;
 	margin-top:10%;
 	text-align: center;
-	width:25%;
+	width:30%;
 	margin-bottom:3%;
 }
 .first-left-btn{
@@ -150,7 +155,7 @@ body{
 .answer-container{
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	min-height: 200px;
-	margin: 5% 5% 0 5%;
+	margin: 5% 7% 0 5%;
 	background: #FFF500;
 }
 .answer-title{
@@ -263,7 +268,58 @@ body{
 		height: 190px;
 	}*/
 }
-@media screen and (min-width: 480px) and (max-width: 680px) {
+/* iPOD 640 x 1136 pixels*/
+@media screen and (min-width: 1279px) and (max-width: 1281px) {
+	.home-question-text{
+		margin: 5% 0 0 5%;
+		padding-top: 15%;
+		font-size: 2em;
+	}
+	.std-btn{
+		font-size: 2em;
+		width:17%;
+		margin-top: 5%;
+		padding: 1% 0.5% 0.5% 0.5%;
+	}
+	.landing-title, .congrats-text{
+		font-size:2.5em;
+	}
+	.landing-para{
+		font-size:1.5em;
+	}
+	.time-container {
+		width: 15%;
+		padding: 1.5% 0.7% 0.7% 0.7%;
+		font-size: 2em;
+		margin: 0 0 0 75%;
+	}
+	.quiz-number-container {
+		margin: 10% 5% 0 5%;
+	}
+	.quiz-number{
+		font-size:2em;
+	}
+	.option-text{
+		font-size:1.4em;
+	}
+	.answer-title {
+		font-size: 2.5em;
+		padding-top: 3%;
+	}
+	.answer-container{
+		margin:3% 7% 0 5%;
+	}
+	.answer-text{
+		font-size:1.5em;
+	}
+	.answer-container{
+		min-height: 250px;
+	}
+	.award-img{
+		margin: 5% auto 2% auto;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 630px) {
 	
 	.home-question-text{
 		margin: 5% 0 0 5%;

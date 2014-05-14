@@ -20,19 +20,19 @@ LandingScreen.prototype = {
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		// UI edits
-		/*document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')";
-*/		
+		document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')";
+		//$("#" + this.mDivName + " .deviat_grtrThan").css("background-image", "url('" + resource_data.getPath("grtr_logo_panel") + "')");
+
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
-	
+		$("#"+this.mDivName).addClass('home-page-bg')			
+		//this.onScreenUpdate()	
 	},
 
 	clickHandler : function(evt) {
 		var target = (evt.currentTarget) ? evt.currentTarget : evt.srcElement;
 		trace("Landing Page: CLICKED :" + target.id);
-		document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')"
-		/*
 		switch(target.id) {
 			case 'landing_btn_start':
 				this.mApplication.moveTo('start');
@@ -40,7 +40,7 @@ LandingScreen.prototype = {
 			case'landing_btn_intro':
 				this.mApplication.moveTo('intro');
 				break;
-		}*/
+		}
 		return false;
 	},
 	onWrapperPush : function(cmd, data) {

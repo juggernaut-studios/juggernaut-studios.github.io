@@ -324,7 +324,7 @@ window.onerror = function(msg, url, lineNumber) {
 		trace(msg);
 }
 var trace = function(str) {
-	//if (_gMainApplication !== undefined && _gMainApplication.appMode == 1)
+	if (_gMainApplication !== undefined && _gMainApplication.appMode == 1)
 		console.log("#[QUIZ APP LOGS]:" + str);
 }
 function doOnOrientationChange() {

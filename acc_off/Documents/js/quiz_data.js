@@ -49,7 +49,7 @@ var question_data = {
 		explanation : 'To learn more about the ways Accenture creates a welcoming workspace for women, go to <a href="http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx" target="_blank">http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx </a>'
 	}, {
 		question : "What was Accenture’s theme for International Women’s Day 2014?",
-		option_1 : "Growing Your Career Capital",
+		option_1 : "Knowing and Growing Your Career Capital",
 		option_2 : "Working Women of the World Unite",
 		option_3 : "Learning to Say Yes to Success",
 		option_4 : "Lean In",
