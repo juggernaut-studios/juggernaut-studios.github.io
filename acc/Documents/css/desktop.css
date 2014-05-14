@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
-	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
+	src:url('./fonts/RotisSansSerifforACCN-Bold.eot?')format('embedded-opentype'),url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype'),url('./fonts/RotisSansSerifforACCN-Bold.woff')  format('woff');
 	
 }
 .body
