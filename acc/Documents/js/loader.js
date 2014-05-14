@@ -33,7 +33,7 @@ LoadingScreen.prototype = {
 	onProgress : function(c) {
 		var a = (parseInt(c.completedCount / c.totalCount * 100) >> 0);
 		document.getElementById("loadingMessage").innerHTML = "<h1>Loading  Assets : Status :" + a + " % </h1>" ;
-		trace(c)
+		trace(a)
 	},
 	onComplete : function() {
 		trace("ASSET Loading COMPLETE!")
