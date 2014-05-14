@@ -194,7 +194,7 @@ var resource_data = {
 		'game' : 'gamePage',
 		'end' : 'endPage'
 	},
-	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
+	htmlentity : [ 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
 	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	appTimer : 180, // its seconds
 	bench_mark : [4, 8, 10], // scoring mechanism range
