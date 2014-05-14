@@ -21,10 +21,10 @@ LandingScreen.prototype = {
 
 		// UI edits
 		/*document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')";
-		
+*/		
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
-*/
+
 	
 	},
 
