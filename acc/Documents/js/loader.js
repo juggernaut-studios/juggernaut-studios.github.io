@@ -15,9 +15,7 @@ LoadingScreen.prototype = {
 	setUp : function() {
 		this.mApplication.showScreen(this.mDivName);
 
-		var resourceKey, sHTML = this.mApplication.renderTemplate('loading_screen_ui', {
-		});
-		document.getElementById(this.mDivName).innerHTML = sHTML;
+		var resourceKey;
 
 		this.mGameAssetLoader = new PxLoader();
 		for (resourceKey in resource_data.images) {
