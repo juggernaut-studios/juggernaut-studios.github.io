@@ -20,14 +20,12 @@ LandingScreen.prototype = {
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		// UI edits
-		document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')";
-		//$("#" + this.mDivName + " .deviat_grtrThan").css("background-image", "url('" + resource_data.getPath("grtr_logo_panel") + "')");
-
+		/*document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')";
+		
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
-
-	//	$("#"+this.mDivName).addClass('home-page-bg')			
-		//this.onScreenUpdate()	
+*/
+	
 	},
 
 	clickHandler : function(evt) {

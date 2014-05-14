@@ -253,8 +253,8 @@ ApplicationWrapper.prototype = {
 				break;
 			case 20:
 				this.nGameState = 40;
-				//this.resetSession();
-				//this.stopAppTimer();
+				this.resetSession();
+				this.stopAppTimer();
 				this.mCurrentScreen = new LandingScreen(this);
 				break;
 			case 40:
