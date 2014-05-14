@@ -72,7 +72,7 @@ ApplicationWrapper.prototype = {
 		for (var indx = 0; indx <= this.appMetaData.totalquestion; indx++)
 			this.mTrackerAnswers.push(indx);
 
-		
+		this.mTotalScore
 		//TIMER RESET
 		this.stopAppTimer();
 

@@ -30,6 +30,7 @@
 	color: #FFF500;
 	font-size: 1em;
 	text-decoration: inherit;
+	text-decoration:underline;
 }
 
 .greater-than-image-container {
@@ -52,11 +53,11 @@
 }
 .congrats-container {
 	float: left;
-	width: 70%;
+	width: 77%;
 }
 .award-img-container {
 	float: right;
-	margin: 10% 5% 0 0;
+	margin: 10% 3% 0 0;
 }
 .congrats-greater-than-img {
 	background-image: url('./../images/grtr.png');
@@ -232,7 +233,7 @@
 .landing-para {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	color: #FFF;
-	width: 90%;
+	width: 94%;
 	margin: 3% 0 0 6%;
 	font-size:1.5em;
 }
