@@ -31,6 +31,8 @@ LandingScreen.prototype = {
 	clickHandler : function(evt) {
 		var target = (evt.currentTarget) ? evt.currentTarget : evt.srcElement;
 		trace("Landing Page: CLICKED :" + target.id);
+		document.getElementById('landingPage').style.backgroundImage = "url('" + resource_data.getPath("landing_lady") + "')"
+		/*
 		switch(target.id) {
 			case 'landing_btn_start':
 				this.mApplication.moveTo('start');
@@ -38,7 +40,7 @@ LandingScreen.prototype = {
 			case'landing_btn_intro':
 				this.mApplication.moveTo('intro');
 				break;
-		}
+		}*/
 		return false;
 	},
 	onWrapperPush : function(cmd, data) {
