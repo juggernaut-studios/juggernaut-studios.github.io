@@ -79,7 +79,7 @@ function loadXMLDoc()
   IN.User.authorize(function() {
 			alert("authenticated");
 			
-			IN.User.Raw("/people/~/shares")
+			IN.API.Raw("/people/~/shares")
     .method("POST")
     .body( JSON.stringify( {
         "content": {
