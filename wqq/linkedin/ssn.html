@@ -6,7 +6,7 @@
 <body>
 
 <!-- 1. Include the LinkedIn JavaScript API and define a onLoad callback function -->
-<script type="text/javascript" src="in.js">
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: 75u3r8o3r0fklq
   onLoad: onLinkedInLoad
   authorize: true
@@ -33,14 +33,14 @@ function loadXMLDoc()
     .body( JSON.stringify( {
         "content": {
           "submitted-url": "http://juggernaut-studios.github.io/",
-          "title": document.getElementById("title").val(),
-          "description": document.getElementById("descrpt").val(),
+          "title": document.getElementById("title").value,
+          "description": document.getElementById("descrpt").value,
           "submitted-image-url": imgURL
         },
         "visibility": {
           "code": "anyone"
         },
-        "comment": document.getElementById("commentTxt").val(),
+        "comment": document.getElementById("commentTxt").value,
       })
     )
     .result(function(r) { 
