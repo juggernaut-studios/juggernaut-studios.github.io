@@ -74,7 +74,12 @@ function loadXMLDoc()
 	//IN.User.authorize();
 	
 	
-	IN.User.Raw("/people/~/shares")
+	
+  
+  IN.User.authorize(function() {
+			alert("authenticated");
+			
+			IN.User.Raw("/people/~/shares")
     .method("POST")
     .body( JSON.stringify( {
         "content": {
@@ -96,6 +101,7 @@ function loadXMLDoc()
       alert("POST FAIL");
     });
   
+});
   
 }
 </script>
