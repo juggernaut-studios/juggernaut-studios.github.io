@@ -9,72 +9,13 @@
   authorize: true
 </script>
 
-<div id="profiles"></div>
-
-<script type="text/javascript">
-  // 2. Runs when the JavaScript framework is loaded
-  function onLinkedInLoad() {
-	console.log(" linkedin loaded");
-    //IN.Event.on(IN, "auth", onLinkedInAuth);
-  }
-
-  // 2. Runs when the viewer has authenticated
-  function onLinkedInLogin() {
-    //IN.API.Profile("me").result(displayProfiles);
-	console.log(" Login Success!");
-	postImage()
-  }
-
-  function postImage()
-  {
-	IN.API.Raw("/people/~/shares")
-    .method("POST")
-    .body( JSON.stringify( {
-        "content": {
-          "submitted-url": "http://juggernaut-studios.github.io/",
-          "title": "Its testing Posting API",
-          "description": "Pure testing so that it can be used",
-          "submitted-image-url": "http://www.ka-gold-jewelry.com/images/products-800/merkaba-prana-small/merkaba-prana-small1.jpg"
-        },
-        "visibility": {
-          "code": "anyone"
-        },
-        "comment": "LMAO!! LOL1"
-      })
-    )
-    .result(function(r) { 
-      alert("POST OK");
-    })
-    .error(function(r) {
-      alert("POST FAIL");
-    });
-  }
-  // 2. Runs when the Profile() API call returns successfully
-  function displayProfiles(profiles) {
-    member = profiles.values[0];
-    document.getElementById("profiles").innerHTML = 
-      "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-  }
-  
-  
-  
-  postVal = function()
-  {
-		IN.Event.on(IN, "auth", function() {onLinkedInLogin();});
-		
-		
-				
-  }
-</script>
 
 
 <script>
 function loadXMLDoc()
 {
 	//IN.User.authorize();
-	
-	
-	
+	var imgURL ="http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
   
   IN.User.authorize(function() {
 			alert("authenticated");
@@ -84,14 +25,14 @@ function loadXMLDoc()
     .body( JSON.stringify( {
         "content": {
           "submitted-url": "http://juggernaut-studios.github.io/",
-          "title": "Hey Man",
-          "description": "Hoo jaaa yaar!",
-          "submitted-image-url": "http://www.ka-gold-jewelry.com/images/products-800/merkaba-prana-small/merkaba-prana-small1.jpg"
+          "title": document.getElementById("title").val(),
+          "description": document.getElementById("descrpt").val(),
+          "submitted-image-url": imgURL
         },
         "visibility": {
           "code": "anyone"
         },
-        "comment": "LMAO!! LOL1"
+        "comment": document.getElementById("commentTxt").val(),
       })
     )
     .result(function(r) { 
@@ -107,10 +48,15 @@ function loadXMLDoc()
 </script>
 </head>
 <body>
+<h2>Add Data</h2>
+<input id="title" placeholder="Enter Title"/>
+<br/>
+<textarea id="descript" placeholder=" Enter Description" rows="20" cols="20"></textarea>
+<br/>
+<textarea id="commentTxt" placeholder=" Enter Comment" rows="10" cols="20"></textarea>
+<br/>
+<button type="button" onclick="loadXMLDoc()">Post On LinkedIn</button>
 
-<h2>AJAX</h2>
-<button type="button" onclick="loadXMLDoc()">Request data</button>
-<button type="button" onclick="postVal()">postVal</button>
 <div id="myDiv"></div>
 
 
