@@ -34,7 +34,9 @@
   
   postVal = function()
   {
-	
+	IN.UI.Share().params({
+			url: "http://www.google.com"
+				}).place()
   }
 </script>
 
@@ -68,6 +70,7 @@ xmlhttp.send("submitted-image-url=http://www.ka-gold-jewelry.com/images/products
 
 <h2>AJAX</h2>
 <button type="button" onclick="loadXMLDoc()">Request data</button>
+<button type="button" onclick="postVal()">postVal</button>
 <div id="myDiv"></div>
 
 
