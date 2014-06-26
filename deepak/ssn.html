@@ -15,27 +15,19 @@
   // 2. Runs when the JavaScript framework is loaded
   function onLinkedInLoad() {
 	console.log(" linkedin loaded");
-    IN.Event.on(IN, "auth", onLinkedInAuth);
+    //IN.Event.on(IN, "auth", onLinkedInAuth);
   }
 
   // 2. Runs when the viewer has authenticated
-  function onLinkedInAuth() {
-    IN.API.Profile("me").result(displayProfiles);
+  function onLinkedInLogin() {
+    //IN.API.Profile("me").result(displayProfiles);
+	console.log(" Login Success!");
+	postImage()
   }
 
-  // 2. Runs when the Profile() API call returns successfully
-  function displayProfiles(profiles) {
-    member = profiles.values[0];
-    document.getElementById("profiles").innerHTML = 
-      "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-  }
-  
-  
-  
-  postVal = function()
+  function postImage()
   {
-
-				IN.API.Raw("/people/~/shares")
+	IN.API.Raw("/people/~/shares")
     .method("POST")
     .body( JSON.stringify( {
         "content": {
@@ -56,6 +48,22 @@
     .error(function(r) {
       alert("POST FAIL");
     });
+  }
+  // 2. Runs when the Profile() API call returns successfully
+  function displayProfiles(profiles) {
+    member = profiles.values[0];
+    document.getElementById("profiles").innerHTML = 
+      "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+  }
+  
+  
+  
+  postVal = function()
+  {
+		IN.Event.on(IN, "auth", function() {onLinkedInLogin();});
+		
+		
+				
   }
 </script>
 
