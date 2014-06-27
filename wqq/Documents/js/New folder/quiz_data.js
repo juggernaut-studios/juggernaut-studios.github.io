@@ -29,7 +29,7 @@ var question_data = {
 		option_3 : "Developing High Performing Women",
 		option_4 : "Women Rule",
 		correct_answer : "3",
-		explanation : 'Developing High Performing Women is part of Accenture\’s  annual investment in training women. Accenture invests annually in providing training to its women employees.'
+		explanation : 'Developing High Performing Women is part of Accenture’s  annual investment in training women. Accenture invests annually in providing training to its women employees.'
 
 	}, {
 		question : "What is Accenture in India’s women’s networking platform called?",
@@ -54,7 +54,7 @@ var question_data = {
 		option_3 : "Learning to Say Yes to Success",
 		option_4 : "Lean In",
 		correct_answer : "1",
-		explanation : 'Knowing and Growing Your Career Capital was adopted as the theme for International Women\’s Day 2014. The three highlights of this theme were Learning New Skills, Gaining New Experiences and Expanding Your Network.'
+		explanation : 'Knowing and Growing Your Career Capital was adopted as the theme for International Women’s Day 2014. The three highlights of this theme were Learning New Skills, Gaining New Experiences and Expanding Your Network.'
 	}, {
 		question : " In the Accenture Survey “Career Capital 2014,” virtually equal numbers of men and women agreed that building their career capital is the key to success.",
 		option_1 : "True",
@@ -172,7 +172,7 @@ var question_data = {
 	 option_3 : "30-35%",
 	 option_4 : "35-40%",
 	 correct_answer : "4",
-	 explanation:'With 36% of our global workforce - that\'s over 100,000, comprising of women, Accenture knows that the success of our women around the globe is key to our success as a company.'
+	 explanation:'With 36% of our global workforce - that\'s over 100,000, comprising of women, know that the success of our women around the globe is key to our success as a company.'
 },{	
 	 question : " Which of these is Accenture’s three-pronged approach to gender inclusivity?",
 	 option_1 : "Attracting, retaining and growing women",
@@ -196,7 +196,7 @@ var question_data = {
 	 option_3 : "Only after maternity",
 	 option_4 : "Only before maternity",
 	 correct_answer : "1",
-	 explanation:'Research indicates that one of the main reasons behind the absence of women leaders is that women tend to drop out of the workforce during maternity. \‘Parents at work\’ initiative addresses this issue for women employees, and now even for male employees by assisting them before, during and post maternity.'
+	 explanation:'Research indicates that one of the main reasons behind the absence of women leaders is that women tend to drop out of the workforce during maternity. This project seeks to assist women employees before, during and post maternity to remain in the workforce and succeed. The program has now been extended to male employees as well.'
 }
 	]
 

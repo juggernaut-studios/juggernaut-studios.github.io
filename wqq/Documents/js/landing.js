@@ -17,6 +17,7 @@ LandingScreen.prototype = {
 		var resourceKey, sHTML = this.mApplication.renderTemplate('landing_screen_ui', {
 			img_landing_footer : resource_data.getPath("landing_footer")
 		});
+		
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		// UI edits
@@ -24,18 +25,19 @@ LandingScreen.prototype = {
 		//$("#" + this.mDivName + " .deviat_grtrThan").css("background-image", "url('" + resource_data.getPath("grtr_logo_panel") + "')");
 
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
-		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
+		//this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
-		
 		//this.onScreenUpdate()	
 	},
 
 	clickHandler : function(evt) {
-		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+		var target = (evt.currentTarget) ? evt.currentTarget : evt.srcElement;
 		trace("Landing Page: CLICKED :" + target.id);
 		switch(target.id) {
 			case 'landing_btn_start':
-				this.mApplication.moveTo('start');
+				//this.mApplication.moveTo('start');
+				//##CR##We will start the game with the introduction followed by the start button. Please look at the attached document for the same.
+				this.mApplication.moveTo('intro');
 				break;
 			case'landing_btn_intro':
 				this.mApplication.moveTo('intro');
@@ -61,7 +63,7 @@ LandingScreen.prototype = {
 			h = document.body.clientHeight;
 		}
 		
-		console.log(w,h)
+		
 		switch(w)
 		{
 			case 3201:

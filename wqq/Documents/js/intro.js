@@ -29,7 +29,7 @@ IntroScreen.prototype = {
 
 	},
 
-	clickHandler : function(evt) {
+	clickHandler : function(event) {
 		
 		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
 		trace("Intro Page: CLICKED :" + target.id);

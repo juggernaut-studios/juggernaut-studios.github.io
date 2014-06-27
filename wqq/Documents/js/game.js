@@ -72,7 +72,7 @@ GameScreen.prototype = {
 
 			case 0:
 				var questionTotal = this.mApplication.appMetaData['totalquestion'], mTemp, index = 1, m = this.mApplication.appSessionData['questioncounter'], set = this.mApplication.appSessionData['questionSet'];
-				this.mCurrentQuesitonData = question_data["questionSet"+set][m];
+				this.mCurrentQuesitonData = this.mApplication.question_data["questionSet"+set][m];
 
 				document.getElementById('questionContent').innerHTML = this.mCurrentQuesitonData.question;
 				//FOR OPTIONS
@@ -132,7 +132,7 @@ GameScreen.prototype = {
 
 	},
 
-	clickHandler : function(evt) {
+	clickHandler : function(event) {
 		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
 		trace("GAME Page: CLICKED :" + target.id);
 		switch(target.id) {
@@ -145,7 +145,7 @@ GameScreen.prototype = {
 
 					//$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-color", color);
 					if(!answer )
-					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background-image", "url('"+this.crossImageURL+"')");
+					$("#q_" + this.mApplication.appSessionData['questioncounter']).css("background", "url('"+this.crossImageURL+"') center center no-repeat");
 
 					this.mCurrentSelectionAnswerID = -1
 					//hide the options and submit button
@@ -153,10 +153,12 @@ GameScreen.prototype = {
 					$("#game_submit_btn").css("display", "none");
 
 					$("#explanationContent .answer-title").html(((answer == true) ? 'Correct' : 'Incorrect'));
-					var expText = (answer != true) ? 'The correct answer is '+rightoption+'<br>' : ''
+					var expText = (answer != true) ? 'The correct answer is '+rightoption+'. ' : ''
 					$("#explanationContent .answer-text").html(expText +''+this.mCurrentQuesitonData['explanation']);
 
 					document.getElementById('explanationContent').style.display = "block"
+					
+					this.mApplication.pauseAppTimer();
 
 				}
 
@@ -168,7 +170,7 @@ GameScreen.prototype = {
 				//document.getElementById('game_continue_btn').innerHTML = "Submit"
 				this.mApplication.manipulateQuestionCounter(1)
 				this.displayQuestion(true);
-
+				this.mApplication.restartAppTimer();
 				break;
 			case 'game_back_btn':
 				this.mApplication.manipulateQuestionCounter(-1)

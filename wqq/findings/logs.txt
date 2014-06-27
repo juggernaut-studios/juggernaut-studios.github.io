@@ -1,0 +1,22 @@
+background: #2A4385;
+
+https://developer.linkedin.com/forum/having-trouble-posting-image-api
+
+https://developer.linkedin.com/forum/image-upload-when-creating-share-company-pages
+
+
+
+https://developer.linkedin.com/documents/share-linkedin
+
+
+
+https://www.linkedin.com/shareArticle?summary=image&title=nike&mini=true&url=http%3A%2F%2Fwww.isba.org%2Fsites%2Fdefault%2Ffiles%2Fimages%2Flandingpages%2Fpublic.jpg
+
+
+https://www.linkedin.com/shareArticle?summary=+I+scored+a+Bronze+Star+in+11+seconds+in+this+fun+quiz+by+Accenture%2E+Click+on+the+link+to+play+and+share+your+score%21+https%3A%2F%2Fprimary%2Ecareers-edit%2Eaccenture%2Ecom%2Fin-en%2Fteam-culture%2Fdiversity%2FPages%2Fwoman_quotient%2Easpx&title=Are+you+ready+to+raise+the+game%3F&mini=true&url=https%3A%2F%2Fprimary%2Ecareers-edit%2Eaccenture%2Ecom%2Fin-en%2Fteam-culture%2Fdiversity%2FPages%2Fwoman_quotient%2Easpx&source=https%3A%2F%2Fprimary%2Ecareers-edit%2Eaccenture%2Ecom%2Fin-en%2Fteam-culture%2Fdiversity%2FPages%2Fwoman_quotient%2Easpx&url%3Dhttp%3A%2F%2Fwww%2Eisba%2Eorg%2Fsites%2Fdefault%2Ffiles%2Fimages%2Flandingpages%2Fpublic%2Ejpg
+
+
+
+
+
+https://www.linkedin.com/shareArticle?summary=+I+scored+a+Bronze+Star+in+11+seconds+in+this+fun+quiz+by+Accenture%2E+Click+on+the+link+to+play+and+share+your+score%21+https%3A%2F%2Fprimary%2Ecareers-edit%2Eaccenture%2Ecom%2Fin-en%2Fteam-culture%2Fdiversity%2FPages%2Fwoman_quotient%2Easpx&title=nike&mini=true&url=http%3A%2F%2Fcareers.accenture.com%2Fin-en%2Fteam-culture%2Fdiversity%2FPublishingImages%2Fquiz%2Fend%2Ffb_post.jpg&source=https%3A%2F%2Fprimary%2Ecareers-edit%2Eaccenture%2Ecom%2Fin-en%2Fteam-culture%2Fdiversity%2FPages%2Fwoman_quotient%2Easpx
