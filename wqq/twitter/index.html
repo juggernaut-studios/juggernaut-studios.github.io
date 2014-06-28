@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello.js - Javascript API for OAuth2 authentication and REST services</title>
+	
+
+	
+	<style>ul:empty:after{content:'empty';font-weight:bold;color:#aaa;}</style>
+	
+	<script src="hello.all.js"></script>
+</head>
+<body>
+	<h1>hello.js - me/friends</h1>
+
+
+	<button onclick="hello('twitter').login()">Login</button>
+
+	<h2>Friends list</h2>
+	<ul id="list"></ul>
+	<button id="more" style="display:none;"></button>
+
+
+
+
+<h2>Initiate</h2>
+<script class="pre">
+
+
+hello.init({ 
+	twitter : 'yQWk2E8OSE9R9VRKDnuk0xrLT'
+},{redirect_uri:'index.html'});
+
+
+
+</script>
+
+<h2>Build Button events</h2>
+<script class="pre">
+hello.on('auth.login', function(auth){
+	
+	// call user information, for the given network
+	hello( auth.network ).api( '/me' ).success(function(r){
+		var $target = $("#profile_"+ auth.network );
+		if($target.length==0){
+			$target = $("<div id='profile_"+auth.network+"'></div>").appendTo("#profile");
+		}
+		$target.html('<img src="'+ r.thumbnail +'" /> Hey '+r.name).attr('title', r.name + " on "+ auth.network);
+	});
+});
+</script>
+
+</body>
+</html>
