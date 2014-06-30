@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello.js - Javascript API for OAuth2 authentication and REST services</title>
+	
+
+	
+	<style>ul:empty:after{content:'empty';font-weight:bold;color:#aaa;}</style>
+	
+	<script src="hello.all.js"></script>
+</head>
+<body>
+	<h1>hello.js - me/friends</h1>
+
+
+
+
+<h2>Initiate</h2>
+<script class="pre">
+var TWITTER_CLIENT_ID = {
+	'juggernaut-studios.github.io' : 'yQWk2E8OSE9R9VRKDnuk0xrLT'
+}[window.location.hostname]
+
+var OAUTH_PROXY_URL = {
+	'local.knarly.com' : 'http://local.knarly.com:5500/proxy'
+}[window.location.hostname] || 'https://auth-server.herokuapp.com/proxy';
+
+hello.on('auth.login', function(r){
+	// Get Profile
+	hello.api(r.network+':/me', function(p){
+		document.getElementById('login').innerHTML = "<img src='"+ p.thumbnail + "' width=24/>Connected to "+ r.network+" as " + p.name;
+	});
+});
+
+hello.init({
+	'twitter' : TWITTER_CLIENT_ID
+},
+{
+	redirect_uri:'index.html',
+	oauth_proxy: OAUTH_PROXY_URL
+});
+
+/*
+hello.init({ 
+	twitter : 'yQWk2E8OSE9R9VRKDnuk0xrLT'
+},{redirect_uri:'index.html'});
+
+*/
+
+</script>
+
+
+<button onclick="hello('twitter').login()">Login</button>
+<div id="login"></div> 
+
+</body>
+</html>
