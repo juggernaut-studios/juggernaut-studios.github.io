@@ -21,3 +21,7 @@ API key	Y3NkFIt8MbxjTjOySNW2bRWg3
 
 
 submitted-image-url=http://www.ka-gold-jewelry.com/images/products-800/merkaba-prana-small/merkaba-prana-small1.jpg
+
+
+
+http://dev.bowdenweb.com/a/fonts/serif/alegreya/demo.html
