@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+	
+    <button onclick ="ClickHandler()"> CLICK ME </button>
+	
+   
+    <script>
+ 
+    // Your code goes here.
+	
+	ClickHandler = function(cmd)
+	{
+		alert("loaded");
+		simpleAjax();
+		
+		
+	}
+	
+	
+	
+	callbackMe =function(resp)
+	{
+		console.log(resp)
+	}
+	
+	
+	simpleAjax = function()
+	{
+		$.ajax({
+				// the URL for the request
+				url: "https://query.yahooapis.com/v1/public/yql",
+			 
+				// the data to send (will be converted to a query string)
+				data: {
+					 q: "show tables",
+					format: "json"
+				},
+			 
+				// whether this is a POST or GET request
+				type: "GET",
+			 
+				// the type of data we expect back
+				dataType : "json",
+			 
+				// code to run if the request succeeds;
+				// the response is passed to the function
+				success: function( json ) {
+					console.log(json);
+					$( "<h1/>" ).text( "RESP RCVD : List of tables " ).appendTo( "body" );
+					
+					var tabLen = json.query.results.table.length
+					for(var i=0;i<tabLen;i++)
+					$( "<div class=\"content\"/>").html( i+" : "+JSON.stringify(json.query.results.table[i].content)).appendTo( "body" );
+				},
+			 
+				// code to run if the request fails; the raw request and
+				// status codes are passed to the function
+				error: function( xhr, status, errorThrown ) {
+					alert( "Sorry, there was a problem!" );
+					console.log( "Error: " + errorThrown );
+					console.log( "Status: " + status );
+					console.dir( xhr );
+				},
+			 
+				// code to run regardless of success or failure
+				complete: function( xhr, status ) {
+					alert( "The request is complete!" );
+				}
+			});
+	}
+ 
+    </script>
+</body>
+</html>
