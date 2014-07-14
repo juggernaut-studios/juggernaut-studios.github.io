@@ -3,11 +3,88 @@
 <head>
     <meta charset="utf-8" />
     <title>Plugin</title>
+	<link rel="stylesheet" href="jquery-ui.css">
 	<script src="jquery-1.11.0.min.js"></script>
+	<script src="jquery-ui.js"></script>
 </head>
 <body>
+
+<h3> jquery UI </h3>
+<hr>
+<p> download it from : <a href="http://jqueryui.com/download/"> click Here to download</a> </p>
+
+<button  onclick="transformUI()">Transform </button>
+
+
+<hr>
+<h1> Sample  </h1>
+Date Picker Example
+
+<input type="text" name="date" id="date1">
+<input type="text" name="date" id="date2"> 
+<hr>
+
+Progress bar Example 
+<div id="elem"> </div>
+
+<div id="elem1"> </div>
+
+<div id="elem2"> </div>
+
+<hr>
+
+Slider  : <button onclick="sliderBtnHandler()">slider</button>
+<div id="mySliderDiv"> </div> 
+
+<hr>
+
+
+
 	<script>
-		
+	sliderBtnHandler = function(){
+	$( "#mySliderDiv" ).slider({
+									orientation: "vertical",
+									min: 0,
+									max: 150,
+									value: 50
+								});
+								
+		setTimeout(function(){
+				alert("CHANGING  SLIDER ORIENTATION ")
+				$( "#mySliderDiv" ).slider({"orientation" :"horizontal"})	
+			
+			}, 3000);							
+							
+								
+}
+
+		transformUI = function()
+		{
+			//date picker
+			$("#date2").datepicker();
+			//progress bar 
+			$( "#elem" ).progressbar();
+			
+			$( "#elem1" ).progressbar( {
+										  value: 37
+										}  );
+										
+			
+
+			$( "#elem" ).bind( "progressbarchange", function() {
+							alert( "The value has changed!" );
+						});
+
+			setTimeout(function(){
+				alert("CHANGING PROGRESS BAR ")
+				$( "#elem" ).progressbar("value",80);
+			
+			}, 3000);	
+
+
+
+					
+		}
     </script>
 </body>
 </html>
