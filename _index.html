@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057) -->
+<html lang="en">
+	<script id="tinyhippos-injected">
+		if (window.top.ripple) {
+			window.top.ripple("bootstrap").inject(window, document);
+		}
+	</script>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JnS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le styles -->
+		<link href="assets/bootstrap.css" rel="stylesheet">
+		<link href="assets/bootstrap-responsive.css" rel="stylesheet">
+		<style>
+			/* GLOBAL STYLES
+			 -------------------------------------------------- */
+			/* Padding below the footer and lighter body text */
+
+			body {
+				padding-bottom: 40px;
+				color: #5a5a5a;
+			}
+
+			/* CUSTOMIZE THE NAVBAR
+			 -------------------------------------------------- */
+
+			/* Special class on .container surrounding .navbar, used for positioning it into place. */
+			.navbar-wrapper {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 10;
+				margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+			}
+			.navbar-wrapper .navbar {
+
+			}
+
+			/* Remove border and change up box shadow for more contrast */
+			.navbar .navbar-inner {
+				border: 0;
+				-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+				-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+				box-shadow: 0 2px 10px rgba(0,0,0,.25);
+			}
+
+			/* Downsize the brand/project name a bit */
+			.navbar .brand {
+				padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+				font-size: 16px;
+				font-weight: bold;
+				text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+			}
+
+			/* Navbar links: increase padding for taller navbar */
+			.navbar .nav > li > a {
+				padding: 15px 20px;
+			}
+
+			/* Offset the responsive button for proper vertical alignment */
+			.navbar .btn-navbar {
+				margin-top: 10px;
+			}
+
+			/* CUSTOMIZE THE CAROUSEL
+			 -------------------------------------------------- */
+
+			/* Carousel base class */
+			.carousel {
+				padding-top: 130px;
+			}
+
+			.carousel .container {
+				position: relative;
+				z-index: 9;
+			}
+
+			.carousel-control {
+				height: 80px;
+				margin-top: 0;
+				font-size: 120px;
+				text-shadow: 0 1px 1px rgba(0,0,0,.4);
+				background-color: transparent;
+				border: 0;
+				z-index: 10;
+			}
+
+			.carousel .item {
+				height: 500px;
+			}
+			.carousel img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 100%;
+				height: 500px;
+			}
+
+			.carousel-caption {
+				background-color: transparent;
+				position: static;
+				max-width: 350px;
+				margin: 4% 20px 9% 0%;
+			}
+			.carousel-caption h1, .carousel-caption .lead {
+				margin: 0;
+				line-height: 1.25;
+				color: #000;
+				text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			}
+			.carousel-caption .btn {
+				margin-top: 10px;
+			}
+
+			/* MARKETING CONTENT
+			 -------------------------------------------------- */
+
+			/* Center align the text within the three columns below the carousel */
+			.marketing .span4 {
+				text-align: center;
+			}
+			.marketing h2 {
+				font-weight: normal;
+			}
+			.marketing .span4 p {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			/* Featurettes
+			 ------------------------- */
+
+			.featurette-divider {
+				margin: 80px 0; /* Space out the Bootstrap <hr> more */
+			}
+			.featurette {
+				padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+				overflow: hidden; /* Vertically center images part 2: clear their floats. */
+			}
+			.featurette-image {
+				margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+			}
+
+			/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+			.featurette-image.pull-left {
+				margin-right: 40px;
+			}
+			.featurette-image.pull-right {
+				margin-left: 40px;
+			}
+
+			/* Thin out the marketing headings */
+			.featurette-heading {
+				font-size: 50px;
+				font-weight: 300;
+				line-height: 1;
+				letter-spacing: -1px;
+			}
+
+			.form-signin {
+				max-width: 300px;
+				padding: 19px 29px 29px;
+				margin: 0 auto 20px;
+				background-color: #fff;
+				border: 1px solid #e5e5e5;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+				-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+				box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			}
+			.form-signin .form-signin-heading, .form-signin .checkbox {
+				margin-bottom: 10px;
+			}
+			.form-signin input[type="text"], .form-signin input[type="password"] {
+				font-size: 16px;
+				height: auto;
+				margin-bottom: 15px;
+				padding: 7px 9px;
+			}
+
+			/* RESPONSIVE CSS
+			 -------------------------------------------------- */
+
+			@media (max-width: 979px) {
+
+				.container.navbar-wrapper {
+					margin-bottom: 0;
+					width: auto;
+				}
+				.navbar-inner {
+					border-radius: 0;
+					margin: -20px 0;
+				}
+
+				.carousel .item {
+					height: 500px;
+				}
+				.carousel img {
+					width: auto;
+					height: 500px;
+				}
+
+				.featurette {
+					height: auto;
+					padding: 0;
+				}
+				.featurette-image.pull-left, .featurette-image.pull-right {
+					display: block;
+					float: none;
+					max-width: 40%;
+					margin: 0 auto 20px;
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				.navbar-inner {
+					margin: -20px;
+				}
+
+				.carousel {
+					margin-left: -20px;
+					margin-right: -20px;
+				}
+				.carousel .container {
+
+				}
+				.carousel .item {
+					height: 300px;
+				}
+				.carousel img {
+					height: 300px;
+				}
+				.carousel-caption {
+					width: 35%;
+					padding: 0 70px;
+				}
+				.carousel-caption h1 {
+					font-size: 30px;
+				}
+				.carousel-caption .lead, .carousel-caption .btn {
+					font-size: 18px;
+				}
+
+				.marketing .span4 + .span4 {
+					margin-top: 40px;
+				}
+
+				.featurette-heading {
+					font-size: 30px;
+				}
+				.featurette .lead {
+					font-size: 18px;
+					line-height: 1.5;
+				}
+
+			}
+		</style>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="../assets/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
+		<style id="holderjs-style" type="text/css">
+			.holderjs-fluid {
+				font-size: 16px;
+				font-weight: bold;
+				text-align: center;
+				font-family: sans-serif;
+				margin: 0
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- NAVBAR
+		================================================== -->
+		<div id ="home" class="navbar-wrapper">
+			<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+			<div class="container">
+
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+						<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="brand" href="#"> <img src="jns_assets/logo.png" /> </a>
+						<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+						<div class="nav-collapse collapse" style="height: 0px;">
+							<h2>JuggerNaut Studios</h2>
+							<ul class="nav">
+								<li class="active">
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<a href="#work">Work</a>
+								</li>
+								<li>
+									<a href="#why_jns">Why JnS?</a>
+								</li>
+								<li>
+									<a href="#contact">Contact Us</a>
+								</li>
+								<!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+
+							</ul>
+						</div><!--/.nav-collapse -->
+					</div><!-- /.navbar-inner -->
+				</div><!-- /.navbar -->
+
+			</div>
+			<!-- /.container -->
+		</div><!-- /.navbar-wrapper -->
+
+		<!-- Carousel
+		================================================== -->
+		<div id="our_moto" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="item">
+					<img src="jns_assets/banner/slide_1.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Gamify all Platforms!</h1>
+							<p class="lead">
+								Our expertise & cross-platform solutions allow you to code once and deploy across multiple platforms.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item active">
+					<img src="jns_assets/banner/slide_2.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>One Stop Shop.</h1>
+							<p class="lead">
+								Powerhouse for Apps & Games development.
+								Our Forte : Unity3d, Flash, HTML5, Android, iOS. 
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="jns_assets/banner/slide_3.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>The Idea Is In You</h1>
+							<p class="lead">
+								We turn your ideas into reality. There is an App for every business.
+							</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#our_moto" data-slide="prev" style="color: rgb(82, 71, 71);">‹</a>
+			<a class="right carousel-control" href="#our_moto" data-slide="next" style="color: rgb(82, 71, 71);">›</a>
+		</div><!-- /.carousel -->
+
+		<!-- Marketing messaging and featurettes
+		================================================== -->
+		<!-- Wrap the rest of the page in another container to center all the content. -->
+
+		<div class="container marketing" >
+			
+			<div id="work" class="featurette" style="padding-top:60px!important">
+				<div class="row-fluid">
+					<ul class="thumbnails">
+						<li class="span3">
+							<h4>Crazy Birds</h4>
+							<a href="#crazy_bird" class="thumbnail"> <img src="jns_assets/thumbnails/proj_1.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4>Graphical World</h4>
+							<a href="#math_graph" class="thumbnail"> <img src="jns_assets/thumbnails/proj_2.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4>Powerbomb Wrestling </h4>
+							<a href="#wrestling_game" class="thumbnail"> <img src="jns_assets/thumbnails/proj_3.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4>Flipper Betting Challenge</h4>
+							<a href="#mp_betting_game" class="thumbnail"> <img src="jns_assets/thumbnails/proj_4.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4>Jumpin Jack</h4>
+							<a href="#jumpin_jack" class="thumbnail"> <img src="jns_assets/thumbnails/proj_5.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4> Lucky Cat Slot </h4>
+							<a href="#lucky_slots" class="thumbnail"> <img src="jns_assets/thumbnails/proj_6.png" /> </a>
+						</li>
+						<li class="span3">
+							<h4> In Progress... </h4>
+							<a href="#coming_soon" class="thumbnail"> <img src="jns_assets/thumbnails/proj_7.png" /> </a>
+						</li>
+					</ul>
+					<a href="#home"><h4>Back To Top</h4> </a>
+				</div>
+
+			</div>
+
+			<hr class="featurette-divider">
+			
+			<div id="why_jns" class="featurette" >
+				<div class="row-fluid">
+					<ul class="thumbnails">
+						<li class="span3" style="width:46%">
+						<h2 class="featurette-heading">One Stop Shop  <span class="muted"><a href=""> -  The JnS Expertise.</a></span></h2>
+				<p class="lead">
+				JnS is a team of programmers and artists providing HTML5, iOS, Android, Flash games and apps development services for mobile, social and online platforms. Individuals, Brands & Studios come to us for Programming, Art, Maintenance & Testing services for  their games or app ideas.
+				<br>
+				<br>
+				
+				<a href="#home"><h4>Back To Top</h4> </a>
+				</p>
+						</li>
+						<li class="span3" style="width:46%">
+						<h2 class="featurette-heading">Flash to HTML5   <span class="muted"><a href=""> - The JnS Solution.</a></span></h2>
+				<p class="lead">
+					Flash has AS2.0 and 3.0. There are converters which convert flash AS2.0 to HTML5. But there is no converter available for AS3.0 to Javascript converter.We have developeed set of utilities which can be used to re-use most of AS3.0 code. So ultimately providing the solution for converting your games and apps to html5 at a faster rate.
+					<br>
+					<span style="float:right;"><a href="#contact"><h4>Get In Touch</h4> </a></span>
+				</p>
+					
+					</ul>
+					
+					
+				</div>
+
+			</div>
+
+			<hr class="featurette-divider">
+			
+
+			<div id ="crazy_bird" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/proj1/crazybird_splash_banner-image.png">
+				<h2 class="featurette-heading">Cross-Platform Game! <span class="muted"><br>Built on JnS Game Engine</h2>
+				<p class="lead">
+					Game can be played <a href="http://juggernaut-studios.com/crazzy/"> here.</a></span>
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="math_graph" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/proj2/graph-walla-game.png">
+				<h2 class="featurette-heading">E-learning Module. <span class="muted" ><br>Built in JnS Flash-to-HTML5 Solution<span></h2>
+				<p class="lead">
+					
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="wrestling_game" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/Proj3/power-bomb_fb.png">
+				<h2 class="featurette-heading">Wrestling Game. <span class="muted"><br>Built on ImpactJS<span></h2>
+				<p class="lead">
+					Game can be played <a href="http://wrestling.woollymammoth.net" target="_blank">here.</a>
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="mp_betting_game" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/Proj4/fleepar-_dextop.png">
+				<h2 class="featurette-heading"> Multiplayer Betting Game <span class="muted"><br>Built in Adobe Flash <span></h2>
+				<p class="lead">
+					Engaging multiplayer betting game for 2-6 players. Game can be played <a href="http://www.funterr.com/" target="_blank">here.</a>
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="jumpin_jack" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/Proj5/jumping-jack-android-and-ipad.png">
+				<h2 class="featurette-heading">Save the Jack! <span class="muted"><br>Built in Javascript<span></h2>
+				<p class="lead">
+					
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="lucky_slots" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/proj6/lucky-cat-slot-screenshot.png">
+				<h2 class="featurette-heading">Lucky Cat!<span class="muted"><br>Built in Adobe Flash<span></h2>
+				<p class="lead">
+					Game can be played <a href="http://apps.facebook.com/mesmogames/rpgArcadeCasino?gameId=260#headerTop" target="_blank">here.</a>
+					
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id ="coming_soon" class="featurette">
+				<img class="featurette-image pull-left" src="jns_assets/proj6/humming-bird.png">
+				<h2 class="featurette-heading">Trivia Question App! <span class="muted"><br>Built in Javascript<span></h2>
+				<p class="lead">
+					Currently in staging enviornment.
+				</p>
+				<a href="#work">Back To Our Work </a>
+				<br>
+				<a href="#home">Back To Home </a>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div id="contact" class="featurette" style="padding-top:60px;">
+				<form class="form-signin">
+					<h2 class="form-signin-heading">Reach Out To Us</h2>
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<textarea type="text" class="input-block-level"  style="height:200px; text-align: left;" placeholder="Any description"></textarea>
+					<button class="btn btn-large btn-primary" type="submit">
+					 <a href="testphp/email_form.php">
+						Contact JnS
+					</a>	
+					</button>
+					<br>
+					<br>
+					<br>
+					<a href="#home">Back to top</a>
+				</form>
+				
+			</div>
+			<!-- /END THE FEATURETTES -->
+			<!-- FOOTER -->
+			<footer>
+				<p class="pull-right">
+					
+				</p>
+				<p>
+					©JuggerNaut-Studios 
+				</p>
+			</footer>
+
+		</div><!-- /.container -->
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./assets/jquery.js"></script>
+		<script src="./assets/bootstrap-transition.js"></script>
+		<script src="./assets/bootstrap-tab.js"></script>
+		<script src="./assets/bootstrap-button.js"></script>
+		<script src="./assets/bootstrap-collapse.js"></script>
+		<script src="./assets/bootstrap-carousel.js"></script>
+		
+		<script>
+			! function($) {
+				$(function() {
+					// carousel demo
+					$('#our_moto').carousel()
+					$('a[href^="#"]').on('click', function(e) {
+						e.preventDefault();
+						var target = this.hash, $target = $(target);
+						$('html, body').stop().animate({
+							'scrollTop' : $target.offset().top
+						}, 900, 'swing', function() {
+							window.location.hash = target;
+						});
+					});
+				})
+			}(window.jQuery)
+		</script>
+		<script src="./assets/holder.js"></script>
+
+	</body>
+</html>

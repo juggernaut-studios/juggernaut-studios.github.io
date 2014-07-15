@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+
+		<script type='text/javascript'>
+			/* STARTING POINT*/
+			var _gMainApplication
+			var documentPath = "Documents/";
+			var imagesPath = "PublishingImages/";
+			var selfPath = "../";
+			function getAssetPath(sType, str) {
+				var sTemp = selfPath;
+				//console.log(': sType:'+sType)
+				switch(sType) {
+					case "docs":
+						sTemp += "" + documentPath
+						break;
+					case "img":
+						//console.log( ' STR '+str);
+						str = str.replace("img/", "");
+						//console.log( ' STR.. '+str);
+						sTemp += "" + imagesPath
+						break;
+				}
+				sTemp += "" + str;
+				return sTemp;
+			}
+
+			//var arrScriptTags = new Array('css/style_flashcard_stc.css','js/lib/jquery-1.7.2.min.js','js/lib/jquery.flip.js','js/lib/jquery-ui-custom-min.js','js/lib/jquery-ui-touch-punch-min.js','js/lib/allinone_carousel.js','js/lib/allinone_carousel_MAIN.js','js/lib/PxLoader.js','js/lib/PxLoaderImage.js','js/model.js','js/screens/passwordScreen.js','js/screens/loadingScreen.js','js/screens/splashScreen.js','js/screens/menuScreen.js','js/screens/howtoplayScreen.js','js/screens/carouselScreen.js','js/screens/gameplayScreen.js','js/screens/correctanswerScreen.js','js/screens/wronganswerScreen.js','js/screens/winnerScreen.js','js/application.js');
+			var arrScriptTags = new Array('css/style_flashcard_stc.css', 'js/lib/jquery-1.7.2.min.js', 'js/app-flashcard.js');
+
+			var arrScriptIndex = 0;
+			var arrDivNames = new Array('loading_script_tags', 'onlyglobalPopup','overlayScreen_ForQuestion','passwordScreen', 'loadingScreen', 'splashScreen', 'menuScreen', 'howtoplayScreen', 'carouselScreen', 'grey_bottom', 'gameplayScreen', 'correctanswerScreen', 'wronganswerScreen', 'winnerScreen')
+			function makeAllInvisible() {
+				for (var i = 0; i < arrDivNames.length; i++)
+					document.getElementById(arrDivNames[i]).style.display = 'none'
+			}
+
+			function startLoadingAssets() {
+				if (arrScriptIndex == 0) {
+					//makeAllInvisible();
+					document.getElementById('main_game_screen').style.display = "none"
+					document.getElementById('loading_script_tags').style.display = "block"
+				}
+
+				if (arrScriptIndex < arrScriptTags.length) {
+					if (arrScriptIndex < 1) {
+						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]));
+						arrScriptIndex++;
+						startLoadingAssets();
+					} else {
+						AddScript(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						arrScriptIndex++;
+					}
+
+				} else {
+				//document.onmouseover = function(evt){evt.preventDefault()};
+					//document.getElementById('main_game_screen').style.display = "block"
+					//document.getElementById('loading_script_tags').style.display = "none"
+					_gMainApplication = new ApplicationWrapper();
+					_gMainApplication.setUp({
+						screenNames : arrDivNames
+					})
+					_gMainApplication.nextTransition();
+
+				}
+			}
+
+			function AddCSS(url, callback) {
+				var script = null;
+				script = document.createElement('link');
+				script.href = url;
+				script.rel = "stylesheet";
+				script.type = 'text/css';
+				script.defer = false;
+
+				if ( typeof callback != "undefined" && callback != null) {
+
+					// IE only, connect to event, which fires when JavaScript is loaded
+					script.onreadystatechange = function() {
+						if (this.readyState == 'complete' || this.readyState == 'loaded') {
+							this.onreadystatechange = this.onload = null;
+							// prevent duplicate calls
+							callback();
+						}
+					}
+					// FireFox and others, connect to event, which fires when JavaScript is loaded
+					script.onload = function() {
+						this.onreadystatechange = this.onload = null;
+						// prevent duplicate calls
+
+						callback();
+					};
+				}
+
+				var head = document.getElementsByTagName('head').item(0);
+				head.appendChild(script);
+			}
+
+			function AddScript(url, callback) {
+				var script = null;
+				script = document.createElement('script');
+				script.src = url;
+				script.type = 'text/javascript';
+				script.defer = false;
+
+				if ( typeof callback != "undefined" && callback != null) {
+
+					// IE only, connect to event, which fires when JavaScript is loaded
+					script.onreadystatechange = function() {
+						if (this.readyState == 'complete' || this.readyState == 'loaded') {
+							this.onreadystatechange = this.onload = null;
+							// prevent duplicate calls
+							callback();
+						}
+					}
+					// FireFox and others, connect to event, which fires when JavaScript is loaded
+					script.onload = function() {
+						this.onreadystatechange = this.onload = null;
+						// prevent duplicate calls
+
+						callback();
+					};
+				}
+
+				var head = document.getElementsByTagName('head').item(0);
+				head.appendChild(script);
+			}
+
+
+			window.addEventListener ? window.addEventListener("load", startLoadingAssets, false) : window.attachEvent && window.attachEvent("onload", startLoadingAssets);
+
+		</script>
+		<div id='viewporter' >
+			<div id="onlyglobalPopup" class="not-visible">
+				
+			</div>
+			<div id="outerMostDiv" class="outerDiv">
+				<div id="loading_script_tags" style="width:905px;
+				height:600px;
+				margin:0 auto;
+				color:white;
+				background-color:#9C9999;">
+					<span style="margin-left: 325px;margin-top: 240px;position: absolute;font-size: 50px;"></span>
+				</div>
+				<div id='main_game_screen' class="mainDiv" style="display:none;">
+					<div id='passwordScreen'>
+
+					</div>
+					<div id='loadingScreen' align='center' >
+							 
+					</div>
+					<div id="splashScreen" class="screen new_bg_color">
+						<div class="eneterGameButton button" id="enterGame">
+							Enter the game
+						</div>
+					</div>
+
+					<div id="menuScreen" class="screen">
+						<div id="screen_2_logo" class="screen2Logo"></div>
+						<div class="buttonsDiv">
+							<div id='how_to_play' class="howToPlayButton button">
+								How to play
+							</div>
+							<div id='play_the_game' class="playGameButton button">
+								Play the game
+							</div>
+						</div>
+						<div id='carousel_2_img' class="caraousalCardImg"></div>
+					</div>
+
+				
+					<div id="howtoplayScreen" class="screen">
+						<div id="new_add_on_how_to_play" class="howToPlayDiv">
+							
+						</div>
+						<div class="buttonsDivPage3">
+							<div id="instruction_back" class="backButton button">
+								Back
+							</div>
+							<div id="instruction_play" class="playButton button" style="margin-left:15px;">
+								Play now
+							</div>
+						</div>
+						
+					</div>
+
+				
+					<div id="carouselScreen" class="screen">
+						<div id="carouselMessage" >Please click on a flash card of your choice to play</div>
+						<div class="caraousalDiv_2" style="overflow:hidden;">
+							<div id="containingDiv">
+								<div id="allinone_carousel_charming"></div>
+							</div>
+
+						</div>
+						
+					</div>
+
+				
+					<div id="gameplayScreen" class="screen"></div>
+					<div id="correctanswerScreen" class="screen">
+
+					</div>
+					<div id="wronganswerScreen" class="screen">
+
+					</div>
+					<div id="winnerScreen" class="screen">
+
+					</div>
+					<div id="allinone_carousel_charming_SM_main">
+					<div id="allinone_carousel_charming_SM"></div>
+					</div>
+					<div id="grey_bottom" class="greyBottom">
+						<div class="backButtonDiv">
+							<div id='carousel_back'class="backButtonFooter contentInsideBackButonDiv button">
+								Back
+							</div>
+							<div id='carousel_Intro'class="introButtonFooter contentInsideBackButonDiv button">
+								Return to Intro
+							</div>
+							<div id='carousel_Help'class="" style="display:none;">
+						
+							</div>
+							
+						</div>
+						
+						<div class="timeLeftDiv">
+							<span class="footerTxt">Time left:&nbsp;</span><span id="timer_txt" class="footerNum">00</span>
+						</div>
+						<div class="pointsDiv">
+							<span class="footerTxt">Points:&nbsp;</span><span  id="score_txt" class="footerNum">000</span>
+						</div>
+
+						
+					</div>
+					
+					<div id="overlayScreen_ForQuestion" class="overlayScreenCSS_ForQuestion">
+					<div id="opaqueScreen_bg_forQuestion" class="overlayScreenCSS_ForQuestion1"></div>
+					<div id="opaqueScreen_ForQuestion" class="opaqueScreenCSS_ForQuestion">
+						Placeholder
+					</div>
+					<div id="clickQuestionTryAgain" class="closeOverlay_ForQuestion">
+						Close X
+					</div>
+					
+					
+				</div>
+
+				</div>
+				
+			</div>
+
+		</div>
+	</body>
+</html>

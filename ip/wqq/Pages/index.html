@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* STARTING POINT*/
+			var _gMainApplication
+			var documentPath = "Documents/";
+			var imagesPath = "PublishingImages/";
+			var selfPath = "../";
+			function getAssetPath(sType, str) {
+				var sTemp = selfPath;
+				switch(sType) {
+					case "docs":
+						sTemp += "" + documentPath
+						break;
+					case "img":
+						//console.log(' STR ' + str);
+						str = str.replace("img/", "");
+						sTemp += "" + imagesPath + "quiz/"
+						break;
+				}
+				sTemp += "" + str;
+				return sTemp;
+			}
+
+			var arrScriptTags = new Array('css/quiz_style.css', 'js/lib/jquery-1.7.2.min.js', 'js/misc.js', 'js/quiz_data.js', 'js/loader.js', 'js/landing.js', 'js/intro.js', 'js/game.js', 'js/end.js', 'js/quiz.js');
+			var arrScriptIndex = 0;
+			var arrDivNames = new Array('loadingScreen', 'landingPage', 'introductionPage', 'gamePage', 'endPage');
+			function makeAllInvisible() {
+				for (var i = 0; i < arrDivNames.length; i++)
+					document.getElementById(arrDivNames[i]).style.display = 'none'
+			}
+
+			function startLoadingAssets() {
+				/*if (arrScriptIndex == 0) {
+				 //makeAllInvisible();
+				 document.getElementById('appContainer').style.display = "none"
+				 document.getElementById('loading_script_tags').style.display = "block"
+				 }
+
+				 */
+
+				if (arrScriptIndex < arrScriptTags.length) {
+					if (arrScriptIndex < 1) {
+						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]));
+						arrScriptIndex++;
+						startLoadingAssets();
+					} else {
+						AddScript(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						arrScriptIndex++;
+					}
+
+				} else {
+
+					_gMainApplication = new ApplicationWrapper();
+					_gMainApplication.setUp({
+						screenNames : arrDivNames
+					})
+					_gMainApplication.nextScene();
+
+				}
+			}
+
+			function AddCSS(url, callback) {
+				var script = null;
+				script = document.createElement('link');
+				script.href = url;
+				script.rel = "stylesheet";
+				script.type = 'text/css';
+				script.defer = false;
+
+				if ( typeof callback != "undefined" && callback != null) {
+
+					// IE only, connect to event, which fires when JavaScript is loaded
+					script.onreadystatechange = function() {
+						if (this.readyState == 'complete' || this.readyState == 'loaded') {
+							this.onreadystatechange = this.onload = null;
+							// prevent duplicate calls
+							callback();
+						}
+					}
+					// FireFox and others, connect to event, which fires when JavaScript is loaded
+					script.onload = function() {
+						this.onreadystatechange = this.onload = null;
+						// prevent duplicate calls
+
+						callback();
+					};
+				}
+
+				var head = document.getElementsByTagName('head').item(0);
+				head.appendChild(script);
+			}
+
+			function AddScript(url, callback) {
+				var script = null;
+				script = document.createElement('script');
+				script.src = url;
+				script.type = 'text/javascript';
+				script.defer = false;
+
+				if ( typeof callback != "undefined" && callback != null) {
+
+					// IE only, connect to event, which fires when JavaScript is loaded
+					script.onreadystatechange = function() {
+						if (this.readyState == 'complete' || this.readyState == 'loaded') {
+							this.onreadystatechange = this.onload = null;
+							// prevent duplicate calls
+							callback();
+						}
+					}
+					// FireFox and others, connect to event, which fires when JavaScript is loaded
+					script.onload = function() {
+						this.onreadystatechange = this.onload = null;
+						// prevent duplicate calls
+
+						callback();
+					};
+				}
+
+				var head = document.getElementsByTagName('head').item(0);
+				head.appendChild(script);
+			}
+
+
+			window.addEventListener ? window.addEventListener("load", startLoadingAssets, false) : window.attachEvent && window.attachEvent("onload", startLoadingAssets);
+
+		</script>
+		<script type="html/template" id = "loading_screen_ui">
+			<h1> LOADING PAGE </h1>
+			<div id="loadingScreen_front" style="width: 240px;height: 240px;">
+
+			</div>
+			<div id="loadingMessage">
+			Loading 24
+			</div>
+		</script>
+		<script type="html/template" id = "landing_screen_ui">
+
+			<div class="deviat_introScreen">
+			<div>
+			<div class="deviat_wqs_title">Women<br /> Quotient Quiz</div>
+			<p class="deviat_wqs_txt">
+			Why do smart women want<br /> to work at Accenture ?
+			</p>
+
+			<div  id="landing_btn_start" class="deviat_startBtn"></div>
+			<div id="landing_btn_intro" class="deviat_introBtn"></div>
+
+			<div class="deviat_grtrThan"></div>
+
+			<div class="deviat_intTxt2">Be greater than.</div>
+			</div>
+			<div class="deviat_introFooter">
+			<img src="<%img_landing_footer%>" height="51" width="440" border="0" />
+			</div>
+
+			</div>
+
+			<div class="deviat_introScreen">
+			<img src="<%img_landing_lady%>" class="deviat_introImgCls" height="505" width="483" border="0" />
+			</div>
+		</script>
+
+		<script type="html/template" id = "intro_screen_ui">
+
+			<div class="deviat_introScreen">
+
+			<div class="deviat_intro_title">Introduction</div>
+
+			<p class="deviat_intro_txt">
+			At Accenture, we know that the success of our women<br />
+			around the globe is the key to our success as a company. <br />
+			That's why we are committed to supporting their unique<br />
+			professional goals and aspirations and why we foster an <br />
+			innovative, collaborative, high-energy work environment. <br /><br />
+
+			Do you know what we do for our women and for those <br />
+			in society? Take our quiz to learn how Accenture delivers <br />
+			on the benfits and rewards that women deserve. <br />
+			The faster you correctly answer these [xx] multiple <br />
+			choice questions, the higher your chance or earning <br />
+			'gold star' and bragging rights!
+			</p>
+
+			<div id="intro_btn_continue" class="deviat_continueBtn"></div>
+			</div>
+
+			<div class="deviat_introScreen">
+			<img src="<%img_thot_bubbles%>" class="deviat_introImgCls2" height="290" width="296" border="0" />
+			</div>
+
+		</script>
+		<script type="html/template" id = "top_question_game_screen_ui">
+				<div id="q_<%questionnumber%>" class="question_top_panel"><%value%></div>
+		</script>
+		<script type="html/template" id = "game_screen_ui">
+
+			
+			<div class="deviat_introScreen">
+			<div class="deviat_pgNukmbers">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			</div>
+
+			<div class="deviat_questDiv">
+			<div id="questionContent" class="deviat_quesTxt">
+			How many women work at Accenture?
+			</div>
+			<div class="deviat_ansBox">
+			<div class="deviat_ansTxt">a. ><span id="option1">30,000</span></div>
+			<div class="deviat_ansTxt">b. ><span id="option2">40,000</span></div>
+			<div class="deviat_ansTxt">c. ><span id="option3">60,000</span></div>
+			<div class="deviat_ansTxt">d. ><span id="option4">100,000</span></div>
+			</div>
+			</div>
+
+			</div>
+
+			<div class="deviat_introScreen">
+			<img src="<%side_static_content%>" class="deviat_introImgCls3" height="257" width="277" border="0" />
+			</div>
+			<div class="deviat_btnDiv">
+			<div id="game_back_btn" class="deviat_backBtn"></div>
+			<div id="game_continue_btn" class="deviat_continueBtn"></div>
+			</div>
+
+			<!--<div class="footer"> &copy; 2014 Accenture. All rights reserved.</div>-->
+			</div>
+		</script>
+		<script type="html/template" id = "end_screen_ui">
+			<div class="deviat_introScreen">
+
+			<div class="deviat_intro_title"><%main_ending_msg%></div>
+
+			<p class="deviat_intro_txt">
+			You've won the <%n_star%> star in <%n_second%> seconds. Play again to get <br />
+			a better score and share it with friends to see if they <br />
+			can beat your score! <br /><br />
+
+			Read more about the Inclusion and Diversity journey<br />
+			at Accenture. (insert url)<br /><br />
+
+			If all of this interests you, click here to view our open <br />
+			jobs and apply. (insert url)
+			</p>
+
+			</div>
+			<button id="end_screen_back">  DUmmy Back</button>
+
+			<div class="deviat_introScreen">
+			<img src="<%thot_bubble_end_screen%>" class="deviat_introImgCls2" height="274" width="327" border="0" />
+			</div>
+		</script>
+
+		<div id="viewporter">
+
+			<div class="outerDiv">
+				<div class="mainDiv">
+
+					<div style="display: block; " id="appContainer">
+						<div style="margin-top: 115px; margin-left: 285px; display: block; " id="loadingScreen">
+
+						</div>
+						<div id="landingPage">
+
+						</div>
+						<div id="introductionPage">
+
+						</div>
+						<div id="gamePage"></div>
+						<div id="endPage"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

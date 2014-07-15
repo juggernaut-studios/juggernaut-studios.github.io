@@ -1,0 +1,443 @@
+
+ html, button, input, select, textarea {
+	color: #666;
+}
+
+body {
+	/*font-size: 1em;
+	 line-height: 1.4;*/
+	font-family: Arial Regular;
+}
+
+a {
+	color: #00e;
+}
+
+a:visited {
+	color: #551a8b;
+}
+
+a:hover {
+	color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+ Helper classes
+ ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+	-webkit-touch-callout: none;
+}
+
+.pressed {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+	-webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+ they have been set as display: none */
+
+.gifhidden {
+	position: absolute;
+	left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+
+.ir br {
+	display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* ==========================================================================
+ Deviator's custom styles
+ ========================================================================== */
+body{
+	font-family: Arial,Helvetica,sans-serif;
+	color:#666666;
+}
+
+.outerDiv{
+	width:900px;
+	height:595px;
+	margin:0 auto;
+	position:relative;
+	
+	 /* fallback */ 
+	 background-color: #89C647; 
+	 background: url(images/linear_bg_2.png); 
+	 background-repeat: repeat-x; 
+	 /* Safari 4-5, Chrome 1-9 */ 
+	 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00AA98), to(#89C647)); 
+	 /* Safari 5.1, Chrome 10+ */ 
+	 background: -webkit-linear-gradient(top, #00AA98, #89C647); 
+	 /* Firefox 3.6+ */ 
+	 background: -moz-linear-gradient(top, #00AA98, #89C647); 
+	 /* IE 10 */ background: -ms-linear-gradient(top, #00AA98, #89C647); 
+	 /* Opera 11.10+ */ 
+	 background: -o-linear-gradient(top, #00AA98, #89C647);
+
+}
+.mainDiv{
+	width:900px;
+	height:595px;
+	margin:0 auto;
+	position:relative;
+}
+
+.header{
+	/*background-image:url(../images/header.jpg);
+	background-repeat:no-repeat;
+	width:875px;
+	height:86px;
+	position:relative;
+	top:0;
+	right:0;*/
+}
+
+.deviat_introScreen{
+	width: 450px;
+	height: 550px;
+	float: left;
+	margin-top: 30px;
+	font-size:14px;
+	/*border:red solid 1px;*/
+}
+
+.deviat_wqs_title{
+	font-size:43px;
+	color:#FDDF05;
+	margin-left:30px; 
+	margin-top:60px;
+	line-height:54px;
+	height:100px;
+}
+
+.deviat_introImgCls{
+	bottom: 0px;
+	position: absolute;
+	right: 0px;
+}
+
+.deviat_wqs_txt{
+	font-size:22px;
+	color:#FFFFFF;
+	margin-left:30px; 
+	line-height:25px;
+}
+
+.deviat_startBtn{
+	xbackground-image: url(../images/start_button.jpg);
+	height: 52px;
+	width: 131px;
+	float: left;
+	margin-left: 25px;
+	position: static;
+	cursor: pointer;
+}
+
+
+.deviat_introBtn{
+	xbackground-image: url(../images/intro_button.jpg);
+	height: 55px;
+	width: 133px;
+	float: left;
+	margin-left: 25px;
+	/* margin-top: 33px; */
+	position: static;
+	cursor: pointer;
+}
+
+.deviat_grtrThan{
+	xbackground-image:url(../images/grtr.jpg);
+	width:197px;
+	height:101px;
+	margin-left:32px;
+	margin-top:105px;
+}
+
+.deviat_intTxt2{
+    font-size:34px;
+	color:#FFFFFF;
+	margin-left: 25px;
+	margin-top:25px;
+}
+
+.deviat_introFooter{
+	bottom: -3px;
+	position: absolute;
+}	
+
+.deviat_intro_title{
+	font-size:32px;
+	color:#FDDF05;
+	margin-left:30px; 
+	margin-top:60px;
+	height:40px;
+}
+
+.deviat_intro_txt{
+	font-size:16px;
+	color:#FFFFFF;
+	margin-left:30px; 
+	line-height:23px;
+	font-weight:200;
+}
+
+.deviat_continueBtn{
+	xbackground-image: url(../images/continue_button.jpg);
+	height: 51px;
+	width: 118px;
+	float: left;
+	margin-left: 25px;
+	/* margin-top: 33px; */
+	position: static;
+	cursor: pointer;
+}
+
+
+.deviat_introImgCls2{
+	top: 97px;
+	position: absolute;
+	right: 25px;
+}
+
+
+.deviat_introImgCls3{
+	top: 185px;
+	position: absolute;
+	right: 25px;
+}
+
+
+.deviat_pgNukmbers{
+	width: 423px;
+	height: 38px;
+	float:left;
+	margin-top: 115px;
+	margin-left: 25px;
+	position: absolute;
+}
+
+.deviat_pgNukmbers div{
+	float:left;
+	height:30px;
+	width:30px;
+	line-height:28px;
+	margin-left:8px;
+	color:#FDDF05;
+	text-align:center;
+	vertical-align:middle;
+	border:#FDDF05 solid 2px;
+}
+
+/*
+.deviat_pgNukmbers div:hover{
+	border:#2E529C solid 2px;
+}
+*/
+
+.deviat_questDiv{
+	width: 440px;
+	height: auto;
+	/* margin: 10px; */
+	position: absolute;
+	margin-top: 190px;
+	margin-left: 32px;
+}
+
+.deviat_quesTxt{
+	color:#FDDF05;
+	font-size:27px;
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+.deviat_ansBox{
+	position:relative;
+	height:auto;
+	float:left;
+	width: 100%;
+}
+
+.deviat_ansTxt{
+	color: #FFF;
+	font-size: 17px;
+	position: relative;
+	margin: 10px 7px 7px 0;
+	margin-left: 0;
+	padding: -1px;
+}
+
+/*.deviat_ansTxt:hover{
+	color:#FDDF05;
+	cursor:pointer;
+}
+*/
+
+.deviat_btnDiv{
+	position: absolute;
+	bottom: 137px;
+	margin-left: 288px;
+}
+
+.deviat_backBtn{
+	xbackground-image: url(../images/back_button.jpg);
+	height: 45px;
+	width: 107px;
+	float: left;
+	margin-left: 25px;
+	position: static;
+	cursor: pointer;
+}
+
+.deviat_continueBtn{
+	xbackground-image: url(../images/continue_button2.jpg);
+	height: 43px;
+	width: 105px;
+	float: left;
+	margin-left: 25px;
+	/* margin-top: 33px; */
+	position: static;
+	cursor: pointer;
+}
+
+
+
+.deviat_footer{
+	font-size:9px;
+	color:#FFFFFF;
+	position:absolute;
+	bottom:20px;
+	right:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

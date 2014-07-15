@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="C5189602" />
+
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+
+		<link href="css/bootstrap.min.css" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<style>
+			body {
+				background-color: #ece8e5;
+			}
+
+			#while_page_loading {
+				display: block;
+				font-size: 5em;
+				color: black;
+				font-weight: bold;
+			}
+
+			#main_app_content {
+				display: none;
+				width: 100%;
+				height: 100%;
+				border: 2px red solid;
+			}
+
+			.computer_image {
+				background-image: url('assets/computer_screen.jpg');
+				width: 100%;
+				height: 768px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.date_of_event {
+				font-size: 4em;
+				text-align: center;
+				color: white;
+				margin-bottom: -2%;
+				font-weight: bold;
+				opacity: 0;
+			}
+			.canvas_elem {
+				margin: 2% 0 0 7.5%;
+				border-radius: 15%;
+				float: left;
+			}
+
+			.tune_to_channel {
+				width: 18%;
+				float: right;
+			}
+
+			.tune_to_channel_1 {
+				background-image: url("assets/tune_to_correct.png");
+				height: 210px;
+				background-size: 200%;
+				background-repeat: no-repeat;
+			}
+			.buton_position_1 {
+				background-position: 0px 0px;
+			}
+
+			.buton_position_2 {
+				background-position: 181px 0px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="while_page_loading">
+			YULP!
+			<br/>
+			page is loading... :(
+			<br />
+			Plz Wait
+
+		</div>
+		<div id="main_app_content">
+
+			<div class="computer_image">
+				<div class="date_of_event">
+					20.20.23230
+				</div>
+				<div style="width: 100%; height: 100%;display:table">
+					<video id="video"  autoplay style="display: none;"></video>
+					<canvas id="computer" class="canvas_elem" style="width:70%; height: 80%; "></canvas>
+					<div class="tune_to_channel">
+						<div id="channel_1" class="tune_to_channel_1 buton_position_1">
+							B1
+						</div>
+						<div id="channel_2" class="tune_to_channel_1 buton_position_1">
+							B2
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="src.js"></script>
+	</body>
+</html>
